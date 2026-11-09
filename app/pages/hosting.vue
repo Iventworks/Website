@@ -73,13 +73,12 @@ const selfHostSteps = [
 						class="flex flex-col rounded-xl border bg-slate-900/80 p-8"
 						:class="option.highlight ? 'border-primary-500/50' : 'border-slate-800'"
 					>
-						<div class="mb-4 flex items-center gap-3">
+						<div class="mb-6 flex items-center gap-3">
 							<div class="flex h-12 w-12 items-center justify-center rounded-lg bg-primary-500/10">
 								<UIcon :name="option.icon" class="text-xl text-primary-400" />
 							</div>
 							<h2 class="text-xl font-semibold text-white">{{ option.title }}</h2>
 						</div>
-						<p class="mb-6 leading-relaxed text-slate-400">{{ option.description }}</p>
 						<ul class="mb-8 flex-1 space-y-2">
 							<li v-for="point in option.points" :key="point" class="flex items-start gap-2 text-slate-300">
 								<UIcon name="i-lucide-check" class="mt-1 shrink-0 text-primary-400" />

@@ -38,7 +38,6 @@ export const trustPillars: TrustPillar[] = [
 export interface HostingOption {
 	icon: string;
 	title: string;
-	description: string;
 	points: string[];
 	to: string;
 	buttonText: string;
@@ -50,8 +49,6 @@ export const hostingOptions: HostingOption[] = [
 	{
 		icon: "i-lucide-cloud",
 		title: "Iventworks Cloud",
-		description:
-			"Ihr bekommt eure eigene Iventworks-Instanz, ohne einen Server betreuen zu müssen. Betrieb, Updates und Backups übernehmen wir.",
 		points: [
 			"Hosting in Deutschland",
 			"Eigene Adresse unter app.iventworks.de oder eure eigene Domain",
@@ -67,8 +64,6 @@ export const hostingOptions: HostingOption[] = [
 	{
 		icon: "i-lucide-server",
 		title: "Self-Hosting",
-		description:
-			"Iventworks ist Open Source. Ihr könnt es mit Docker auf eurem eigenen Server betreiben und behaltet die volle Kontrolle über eure Daten.",
 		points: [
 			"Kostenlos und Open Source (AGPL-3.0)",
 			"Fertiges Docker-Image und Docker Compose",

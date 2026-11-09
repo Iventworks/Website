@@ -148,7 +148,10 @@ const features = [
 
 				<DeviceShowcase :screens="deviceScreens.overview" />
 
-				<div class="mx-auto mt-16 grid max-w-3xl grid-cols-2 gap-8 text-center md:grid-cols-4">
+				<!-- Columns as wide as their content with one fixed gap, so the space between the values is even. -->
+				<div
+					class="mx-auto mt-16 grid w-fit grid-cols-[repeat(2,auto)] justify-center gap-x-12 gap-y-8 text-center md:grid-cols-[repeat(4,auto)] md:gap-x-16"
+				>
 					<div v-for="stat in stats" :key="stat.value" class="space-y-1">
 						<div class="text-2xl font-bold text-primary-400 md:text-3xl">{{ stat.value }}</div>
 						<div class="text-sm text-slate-500">{{ stat.label }}</div>
@@ -285,13 +288,12 @@ const features = [
 						class="flex flex-col rounded-xl border bg-slate-900/80 p-8"
 						:class="option.highlight ? 'border-primary-500/50' : 'border-slate-800'"
 					>
-						<div class="mb-4 flex items-center gap-3">
+						<div class="mb-6 flex items-center gap-3">
 							<div class="flex h-12 w-12 items-center justify-center rounded-lg bg-primary-500/10">
 								<UIcon :name="option.icon" class="text-xl text-primary-400" />
 							</div>
 							<h3 class="text-xl font-semibold text-white">{{ option.title }}</h3>
 						</div>
-						<p class="mb-6 leading-relaxed text-slate-400">{{ option.description }}</p>
 						<ul class="mb-8 flex-1 space-y-2">
 							<li v-for="point in option.points" :key="point" class="flex items-start gap-2 text-slate-300">
 								<UIcon name="i-lucide-check" class="mt-1 shrink-0 text-primary-400" />
