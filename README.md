@@ -32,18 +32,17 @@ bun run dev   # http://localhost:12541
 
 ### Screenshots
 
-Die Dateien in `public/static/screenshots/` sind **leere Platzhalter-PNGs**. Ersetzt sie durch echte
-Screenshots der App in derselben Größe:
+Die Laptop- und Handy-Rahmen auf der Startseite und der Funktionen-Seite zeigen Screenshots der App
+aus `public/static/screenshots/`:
 
 | Datei | Größe | Zeigt |
 | --- | --- | --- |
-| `laptop-uebersicht.png` | 1600 × 1000 | Startseite, Laptop: persönliche Übersicht |
-| `handy-programm.png` | 900 × 1950 | Startseite, Handy: Tagesprogramm einer Freizeit |
-| `laptop-teilnehmende.png` | 1600 × 1000 | Funktionen, Laptop: Teilnehmendenliste |
-| `handy-chat.png` | 900 × 1950 | Funktionen, Handy: Team-Chat |
+| `laptop-freizeit.webp` | 2560 × 1600 (16:10) | Übersicht der Freizeit „Sommercamp 2027“ im Browser |
+| `handy-freizeit.webp` | 891 × 1977 (ca. 9:19,5) | dieselbe Übersicht auf dem Handy |
 
-Andere Dateinamen oder Formate (z. B. `.webp`) und die Alt-Texte stellt ihr in
-`app/data/screenshots.ts` ein.
+Welche Bilder wo erscheinen und ihre Alt-Texte stehen in `app/data/screenshots.ts`. Neue Screenshots
+am besten als verlustfreies WebP ablegen (`cwebp -lossless -z 9 bild.png -o bild.webp`):
+bei Screenshots von Oberflächen ist das schärfer und meist sogar kleiner als verlustbehaftetes WebP.
 
 ### Neue Docs-Seite
 

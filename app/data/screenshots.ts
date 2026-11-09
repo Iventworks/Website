@@ -1,7 +1,7 @@
 /**
- * Screens shown in the laptop and phone frames (components/device/Showcase.vue). The files in
- * public/static/screenshots/ are empty placeholder PNGs: replace them with real screenshots of the
- * app at the same size (laptop 16:10, 1600 × 1000; phone 9:19.5, 900 × 1950) and adjust `alt`.
+ * Screens shown in the laptop and phone frames (components/device/Showcase.vue). Files live in
+ * public/static/screenshots/. Laptop screenshots are 16:10 (e.g. 2560 × 1600), phone screenshots
+ * about 9:19.5; the frames crop from the top if the ratio differs slightly.
  */
 export interface Screenshot {
 	src: string;
@@ -15,29 +15,25 @@ export interface DeviceScreens {
 	phone: Screenshot;
 }
 
-const laptop = (file: string, alt: string): Screenshot => ({
-	src: `/static/screenshots/${file}`,
-	alt,
-	width: 1600,
-	height: 1000,
-});
-
-const phone = (file: string, alt: string): Screenshot => ({
-	src: `/static/screenshots/${file}`,
-	alt,
-	width: 900,
-	height: 1950,
-});
+/** The overview of an event ("Sommercamp 2027") in the app, on a laptop and on a phone. */
+const eventOverview: DeviceScreens = {
+	laptop: {
+		src: "/static/screenshots/laptop-freizeit.webp",
+		alt: "Iventworks im Browser: die Übersicht der Freizeit „Sommercamp 2027“ mit Teilnehmenden, Team, offenen Aufgaben und Ausgaben, dem nächsten Programm, Neuigkeiten und der Seitenleiste mit allen Bereichen der Freizeit.",
+		width: 2560,
+		height: 1600,
+	},
+	phone: {
+		src: "/static/screenshots/handy-freizeit.webp",
+		alt: "Iventworks auf dem Handy: dieselbe Übersicht des „Sommercamp 2027“ mit Kennzahlen und dem Programm, in dem die eigenen Programmpunkte mit „Du bist zuständig“ markiert sind.",
+		width: 891,
+		height: 1977,
+	},
+};
 
 export const deviceScreens = {
 	/** Landing page hero. */
-	overview: {
-		laptop: laptop("laptop-uebersicht.png", "Die persönliche Übersicht von Iventworks im Browser."),
-		phone: phone("handy-programm.png", "Das Tagesprogramm einer Freizeit in der Iventworks-App."),
-	},
+	overview: eventOverview,
 	/** Features page. */
-	event: {
-		laptop: laptop("laptop-teilnehmende.png", "Die Teilnehmendenliste einer Freizeit in Iventworks."),
-		phone: phone("handy-chat.png", "Der Team-Chat einer Freizeit in der Iventworks-App."),
-	},
+	event: eventOverview,
 } satisfies Record<string, DeviceScreens>;
