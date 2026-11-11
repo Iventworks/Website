@@ -15,8 +15,11 @@ nicht.
 
 - ein Linux-Server mit **Docker** und dem **Compose-Plugin**
 - eine Domain oder Subdomain, zum Beispiel `planung.eure-organisation.de`
-- ein **Reverse Proxy** mit HTTPS auf demselben Server, zum Beispiel Caddy, nginx oder Traefik
+- ein **Reverse Proxy** mit HTTPS auf demselben Server, zum Beispiel Caddy, nginx, Traefik oder
+  Apache
 - optional ein **SMTP-Zugang** für E-Mails (Einladungen, Passwort vergessen)
+- für Push-Benachrichtigungen ausgehende HTTPS-Verbindungen zu den Push-Diensten der Browser, siehe
+  [Reverse Proxy & HTTPS](/docs/self-hosting/reverse-proxy#ausgehende-verbindungen)
 
 ## 1. Compose-Datei anlegen
 
@@ -39,6 +42,8 @@ services:
       IVENTWORKS_TRUST_PROXY: true
       IVENTWORKS_TIMEZONE: Europe/Berlin
       IVENTWORKS_MAX_UPLOAD_SIZE_MB: 25
+      # Kontakt für die Push-Dienste der Browser (Push-Benachrichtigungen)
+      IVENTWORKS_WEB_PUSH_SUBJECT: mailto:admin@eure-organisation.de
 
       IVENTWORKS_BACKUP_ENABLED: true
       IVENTWORKS_BACKUP_SCHEDULE: "0 3 * * *"
@@ -77,9 +82,18 @@ Oberfläche an, ihr gebt sie selbst weiter. Alle Einstellungen stehen unter
 ## 2. Reverse Proxy einrichten
 
 Iventworks lauscht auf `127.0.0.1:31316`. Richtet euren Reverse Proxy so ein, dass er HTTPS für eure
-Domain übernimmt und alle Anfragen an diese Adresse weiterleitet. Der Proxy muss dabei die
-Client-Adresse im Header `X-Forwarded-For` anhängen, wie es Caddy, nginx und Traefik
-standardmäßig bzw. mit der üblichen Konfiguration tun.
+Domain übernimmt und alle Anfragen an diese Adresse weiterleitet, auch die WebSocket-Verbindung
+unter `/ws/realtime` für Live-Updates. Mit Caddy reicht das:
+
+```text [/etc/caddy/Caddyfile]
+planung.eure-organisation.de {
+	encode zstd gzip
+	reverse_proxy 127.0.0.1:31316
+}
+```
+
+Beispiele für nginx, Traefik und Apache und alles, was der Proxy können muss, stehen unter
+[Reverse Proxy & HTTPS](/docs/self-hosting/reverse-proxy).
 
 Weil der Port nur lokal erreichbar ist, ist `IVENTWORKS_TRUST_PROXY: true` richtig. Veröffentlicht
 ihr den Port jemals direkt im Internet, setzt den Wert auf `false`.

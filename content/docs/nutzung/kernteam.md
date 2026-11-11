@@ -1,6 +1,6 @@
 ---
 title: "Kernteam-Bereich"
-description: "Der Kernteam-Bereich in Iventworks: Events, Personalplanung, Finanzen, Statistiken, Material und Neuigkeiten der ganzen Organisation."
+description: "Der Kernteam-Bereich in Iventworks: Events anlegen und kopieren, Personalplanung, Finanzen, Statistiken, Material und Neuigkeiten der ganzen Organisation."
 navigation:
   title: Kernteam-Bereich
 ---
@@ -17,13 +17,16 @@ Der Einstieg in den Kernteam-Bereich mit einem Überblick über die Arbeit der O
 
 ## Freizeiten & Events
 
-Alle Events der Organisation: anlegen, Leitungen festlegen, archivieren und löschen.
+Alle Events der Organisation: anlegen, Leitungen festlegen, archivieren und löschen. Über **Kopieren …**
+legt ihr aus einem Event ein neues an, zum Beispiel die Freizeit vom letzten Jahr, und wählt aus, was
+mitkommt, siehe [Events kopieren](/docs/nutzung/freizeiten-und-events#events-kopieren).
 
 ## Personalplanung
 
 **Wer ist wann wo im Einsatz?** Die Personalplanung zeigt für einen Zeitraum von drei Monaten bis
 zu einem Jahr, welche Personen in welchen Events eingeplant sind und wer noch frei ist. Freie
-Personen teilt ihr direkt einem Event zu.
+Personen teilt ihr direkt einem Event zu. [Regeltermine](/docs/nutzung/regeltermine) zählen dabei
+nur an ihren Terminen, nicht an jedem Tag dazwischen.
 
 ## Finanzen und Statistiken
 

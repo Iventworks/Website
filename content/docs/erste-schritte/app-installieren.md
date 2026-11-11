@@ -36,3 +36,14 @@ bestätige die Installation. Iventworks öffnet sich danach in einem eigenen Fen
 Wenn du Iventworks schon als App nutzt, zeigt die Seite **App installieren** das an. Für weitere
 Geräte findest du dort unter **Andere Geräte** die passende Anleitung.
 ::
+
+## Push-Benachrichtigungen
+
+Als App bekommst du auf Wunsch Push-Benachrichtigungen für neue Nachrichten und alles, was für dich
+ansteht, auch wenn Iventworks geschlossen ist. Wo das System es unterstützt, zeigt das App-Icon die
+Zahl der ungelesenen Nachrichten und Benachrichtigungen. Einschalten kannst du Push unter
+**Einstellungen → Benachrichtigungen**, siehe
+[Push-Benachrichtigungen](/docs/nutzung/persoenlicher-bereich#push-benachrichtigungen).
+
+Auf **iPhone und iPad** geht das nur in der installierten App (ab iOS 16.4), nicht in Safari. Auf
+Android und am Computer funktioniert Push auch im Browser.

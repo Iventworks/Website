@@ -5,7 +5,7 @@ import { deviceScreens } from "~/data/screenshots";
 usePageSeo({
 	title: "Funktionen – Iventworks",
 	description:
-		"Teilnehmende, Programm, Zimmer, Team, Aufgaben, Nachrichten, Dokumente und Finanzen: alle Funktionen von Iventworks für Freizeiten, Camps und Events.",
+		"Teilnehmende, Programm, Zimmer, Team, Regeltermine mit Dienstplan, Aufgaben, Nachrichten, Dokumente und Finanzen: alle Funktionen von Iventworks für Freizeiten, Camps und Events.",
 	ogImage: "https://www.iventworks.de/static/og/iventworks.png",
 });
 
@@ -18,9 +18,23 @@ const areas = [
 		points: [
 			"Übersicht mit offenen Aufgaben, ungelesenen Nachrichten und der nächsten Freizeit",
 			"Meine Aufgaben mit Fälligkeit und Priorität",
-			"Nachrichten mit einzelnen Personen und im Team",
 			"Kalender und persönliche Notizen",
 			"Benachrichtigungen, wenn etwas für dich ansteht",
+			"Neuigkeiten deiner Organisation",
+		],
+	},
+	{
+		id: "nachrichten",
+		icon: "i-lucide-messages-square",
+		title: "Nachrichten",
+		description: "Chats wie im Messenger, aber bei eurer Organisation statt in privaten Gruppen.",
+		points: [
+			"Direkt- und Gruppenchats, dazu automatisch ein Chat pro Event, Gruppe und Kernteam",
+			"Dateien und Bilder anhängen, auch per Ziehen und Ablegen",
+			"Antworten, Reaktionen, Bearbeiten und Löschen",
+			"Lesebestätigungen, Online-Status und wer gerade schreibt",
+			"Angeheftete Nachrichten und Suche in einem oder allen Chats",
+			"Live ohne Neuladen und als Push-Benachrichtigung",
 		],
 	},
 	{
@@ -35,6 +49,20 @@ const areas = [
 			"Zimmer, Gruppen, Team und Zuständigkeiten",
 			"Aufgaben, Notizen und Dokumente der Freizeit",
 			"Statistiken und Audit-Log für die Leitung",
+		],
+	},
+	{
+		id: "regeltermine",
+		icon: "i-lucide-calendar-sync",
+		title: "Regeltermine & Dienstplan",
+		description: "Für alles, was sich wiederholt: Gruppenstunden, Proben, Treffen.",
+		points: [
+			"Wöchentlich oder monatlich, alle paar Wochen oder Monate, mit üblicher Uhrzeit",
+			"Jeder Termin mit eigenem Thema, Notizen, Uhrzeit und Ort",
+			"Termine absagen oder zusätzliche anlegen, die Eingeteilten werden benachrichtigt",
+			"Dienstplan pro Termin und Zuständigkeit",
+			"Automatisch füllen: alle üblich Zuständigen oder reihum im Wechsel",
+			"Mitarbeitende übernehmen offene Dienste selbst",
 		],
 	},
 	{
@@ -56,7 +84,7 @@ const areas = [
 		title: "Kernteam",
 		description: "Für alle, die die Arbeit der ganzen Organisation koordinieren.",
 		points: [
-			"Freizeiten & Events anlegen und Leitungen festlegen",
+			"Freizeiten & Events anlegen, Leitungen festlegen und Events fürs nächste Mal kopieren",
 			"Personalplanung über alle Events",
 			"Finanzen und Statistiken organisationsweit",
 			"Material & Ressourcen verwalten und für Events reservieren",
@@ -90,14 +118,28 @@ const areas = [
 			"Audit-Log mit allen wichtigen Änderungen",
 		],
 	},
+	{
+		id: "app",
+		icon: "i-lucide-smartphone",
+		title: "App & Push",
+		description: "Auf der Freizeit am Handy, ohne App Store.",
+		points: [
+			"Als App installieren auf iPhone, Android und am Computer",
+			"Euer Logo als App-Icon, mit der Zahl der ungelesenen Nachrichten",
+			"Push-Benachrichtigungen für Nachrichten, Aufgaben, Dienste und mehr",
+			"Pro Gerät einstellbar, auf Wunsch ohne Nachrichtentext",
+			"Ende-zu-Ende verschlüsselt über den Push-Dienst des Geräts",
+			"Online-Status auf Wunsch verbergen",
+		],
+	},
 ];
 
 const extras = [
 	{
-		icon: "i-lucide-smartphone",
-		title: "Als App installieren",
+		icon: "i-lucide-copy-plus",
+		title: "Fürs nächste Mal kopieren",
 		description:
-			"Iventworks lässt sich auf iPhone, Android und am Computer als App installieren, mit eurem Logo als App-Icon.",
+			"Die Freizeit vom letzten Jahr als Vorlage: Team, Programm, Zuständigkeiten, Aufgaben und Dokumente übernehmen, die Termine wandern mit.",
 	},
 	{
 		icon: "i-lucide-building",

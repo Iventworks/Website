@@ -49,6 +49,35 @@ Datensatz einer anderen Organisation verweisen.
 - Anfragen werden auf ihre Größe geprüft, bevor sie gelesen werden: Uploads bis
   `IVENTWORKS_MAX_UPLOAD_SIZE_MB`, alles andere bis 2 MB.
 
+## Live-Verbindung
+
+Live-Updates kommen über eine WebSocket-Verbindung unter `/ws/realtime`.
+
+- Sie meldet nur, **dass** sich etwas geändert hat. Die Daten selbst lädt die App wie immer über die
+  API, mit denselben Rechteprüfungen.
+- Zum Verbinden holt sich die App mit ihrer Anmeldung ein **einmaliges Ticket**, das 30 Sekunden gilt
+  und nur für die eigene Organisation. Die Verbindung braucht kein Cookie, und das Anmelde-Token steht
+  nie in der Adresse.
+- Iventworks nimmt die Verbindung nur von der eigenen Adresse der Organisation an (`Origin`), andere
+  Websites können keine Verbindung im Namen einer Person öffnen.
+- **Abmelden**, das Beenden einer Sitzung oder eines API-Schlüssels und das Entziehen der Rolle
+  trennen die Verbindung sofort. Zusätzlich prüft Iventworks jede Verbindung einmal pro Minute.
+- Tickets, Verbindungen pro Person, Nachrichten pro Verbindung und ihre Größe sind begrenzt.
+
+## Push-Benachrichtigungen
+
+- Push-Benachrichtigungen sind **Ende-zu-Ende verschlüsselt** (Web Push). Der Push-Dienst des Browsers
+  stellt sie zu, kann ihren Inhalt aber nicht lesen.
+- Jede Person schaltet sie selbst pro Gerät ein und entscheidet, ob der Text einer Nachricht darin
+  steht. Ohne Text zeigt das Gerät nur „Neue Nachricht von …“.
+- Ein Gerät gehört zu einer Anmeldung: Abmelden, eine beendete oder abgelaufene Sitzung beenden auch
+  die Push-Benachrichtigungen. Gesperrte und nicht freigeschaltete Konten bekommen keine.
+- Iventworks schickt nur an die Push-Dienste von Google, Mozilla, Apple und Microsoft (und an
+  eingetragene, siehe [Konfiguration](/docs/self-hosting/konfiguration#push-benachrichtigungen)),
+  ohne Weiterleitungen. Ein Gerät kann so keine beliebige Adresse angeben, die euer Server aufruft.
+- Jede Person kann ihren **Online-Status** und „zuletzt online“ verbergen. Dann speichert Iventworks
+  auch nicht, wann sie zuletzt online war.
+
 ## Backups
 
 Backups sind mit AES-256-GCM verschlüsselt, mit eigenem Salt und IV pro Backup. Sie lassen sich
@@ -56,13 +85,16 @@ prüfen, bevor sie wiederhergestellt werden. Siehe [Backups](/docs/self-hosting/
 
 ## Checkliste für den Betrieb
 
-- **Port nur lokal veröffentlichen** (`127.0.0.1:31316`) und HTTPS über den Reverse Proxy.
+- **Port nur lokal veröffentlichen** (`127.0.0.1:31316`) und HTTPS über den
+  [Reverse Proxy](/docs/self-hosting/reverse-proxy), der auch WebSockets durchlässt.
 - `IVENTWORKS_TRUST_PROXY=true` nur hinter genau einem Reverse Proxy. Wird der Port direkt
   veröffentlicht, auf `false` setzen, sonst lässt sich die Client-Adresse fälschen.
 - Die interaktive API-Dokumentation mit `IVENTWORKS_API_DISABLE_DOCS=true` abschalten.
 - **Backups einschalten**, eine Kopie außerhalb des Servers anlegen (S3) und die Passphrase
   außerhalb des Servers aufbewahren.
-- Das Upload-Limit zum Arbeitsspeicher des Servers passend wählen.
+- Das Upload-Limit zum Arbeitsspeicher des Servers passend wählen, und das Limit im Proxy dazu.
+- `IVENTWORKS_WEB_PUSH_SUBJECT` auf eine Adresse setzen, unter der ihr erreichbar seid, und das
+  Push-Schlüsselpaar nach dem Start nicht mehr ändern.
 - Regelmäßig [aktualisieren](/docs/self-hosting/installation).
 - Freigabelinks bei Bedarf unter **Administration → Organisation** einschränken oder abschalten.
 
