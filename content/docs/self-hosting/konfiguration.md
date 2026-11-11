@@ -37,6 +37,28 @@ verhindert den Start mit einer Fehlermeldung. Eine nicht gesetzte Variable nimmt
 Uploads werden während der Verarbeitung im Arbeitsspeicher gehalten. Haltet das Limit deshalb im
 Verhältnis zum RAM eures Servers.
 
+## Push-Benachrichtigungen
+
+Push-Benachrichtigungen funktionieren ohne Einstellung. Iventworks nutzt dafür den Standard Web Push:
+Der Server schickt jede Benachrichtigung verschlüsselt an den Push-Dienst des jeweiligen Browsers
+(Google, Mozilla, Apple, Microsoft), der sie an das Gerät zustellt. Ein Konto oder einen Schlüssel bei
+diesen Diensten braucht ihr nicht.
+
+| Variable | Standard | Bedeutung |
+| --- | --- | --- |
+| `IVENTWORKS_WEB_PUSH_SUBJECT` | `IVENTWORKS_APP_URL`, wenn sie mit `https` beginnt | Kontakt für die Push-Dienste, falls es Probleme mit euren Nachrichten gibt: `mailto:admin@eure-organisation.de` oder eine `https://`-Adresse |
+| `IVENTWORKS_WEB_PUSH_PUBLIC_KEY` / `IVENTWORKS_WEB_PUSH_PRIVATE_KEY` | – | Eigenes Schlüsselpaar (VAPID), z. B. aus `bunx web-push generate-vapid-keys`. Ohne diese Werte erzeugt Iventworks beim ersten Start ein Paar und speichert es in der Datenbank. |
+| `IVENTWORKS_WEB_PUSH_EXTRA_HOSTS` | – | Weitere Push-Dienste, kommagetrennt. Google, Mozilla, Apple und Microsoft sind eingebaut. |
+
+::callout{icon="i-lucide-key-round" color="warning"}
+Ändert das Schlüsselpaar nach dem Start nicht mehr. Sonst funktionieren die Push-Benachrichtigungen auf
+keinem Gerät mehr, bis jede Person sie dort neu einschaltet. Das gespeicherte Paar ist Teil der
+Datenbank und damit in jedem [Backup](/docs/self-hosting/backups) enthalten.
+::
+
+Iventworks schickt nur an die eingebauten und die eingetragenen Push-Dienste. Ein Gerät kann so keine
+beliebige Adresse angeben, die euer Server dann aufruft.
+
 ## E-Mail
 
 | Variable | Bedeutung |

@@ -15,7 +15,7 @@ einer Freizeit**. Die Rechte prüft immer der Server, nicht nur die Oberfläche.
 | Rolle | Darf |
 | --- | --- |
 | **Admin** | Benutzer, Einladungen, das komplette Audit-Log, Name, Farbe, Logo und Domains der Organisation, dazu alles, was das Kernteam darf |
-| **Kernteam** | Freizeiten & Events anlegen und löschen, Leitungen festlegen, Neuigkeiten und Dokumente der Organisation, Material & Ressourcen, Finanzen, Statistiken und Personalplanung über alle Events, Kernteam-Notizen und Kernteam-Chat |
+| **Kernteam** | Freizeiten & Events anlegen, kopieren und löschen, Leitungen festlegen, Neuigkeiten und Dokumente der Organisation, Material & Ressourcen, Finanzen, Statistiken und Personalplanung über alle Events, Kernteam-Notizen und Kernteam-Chat |
 | **Mitarbeitende** | Den eigenen Bereich mit Übersicht, Aufgaben, Nachrichten, Kalender und Notizen, dazu die Freizeiten, in deren Team sie sind |
 | **Nicht freigeschaltet** | Nur die eigenen Kontoeinstellungen, bis ein Admin eine Rolle vergibt |
 
@@ -27,8 +27,8 @@ Kernteam nur in Freizeiten, in deren Team es ist.
 
 | Rolle | Darf |
 | --- | --- |
-| **Leitung** | Die Freizeit verwalten: Teilnehmende, Programm, Zimmer, Team, Gruppen, Budget, Ausgaben prüfen, Statistiken, Audit-Log und Einstellungen |
-| **Mitarbeiter:in** | Alles Organisatorische sehen, auch die Gesundheitsangaben der Teilnehmenden, Notizen zu Teilnehmenden schreiben, Aufgaben und Notizen anlegen, Dokumente hochladen und Ausgaben einreichen |
+| **Leitung** | Die Freizeit verwalten: Teilnehmende, Programm, Zimmer, Team, Gruppen, Budget, Ausgaben prüfen, Statistiken, Audit-Log und Einstellungen, bei Regelterminen auch die Termine und den Dienstplan |
+| **Mitarbeiter:in** | Alles Organisatorische sehen, auch die Gesundheitsangaben der Teilnehmenden, Notizen zu Teilnehmenden schreiben, Aufgaben und Notizen anlegen, Dokumente hochladen, Ausgaben einreichen und Dienste im Dienstplan selbst übernehmen |
 
 ## Gesundheitsdaten
 

@@ -53,7 +53,7 @@ const pillars = [
 		icon: "i-lucide-smartphone",
 		title: "Auf jedem Gerät",
 		description:
-			"Am Laptop planen, auf der Freizeit am Handy nachschauen. Iventworks lässt sich als App auf iPhone und Android installieren.",
+			"Am Laptop planen, auf der Freizeit am Handy nachschauen. Iventworks lässt sich als App auf iPhone und Android installieren, mit Push-Benachrichtigungen.",
 	},
 ];
 
@@ -66,9 +66,9 @@ const features = [
 	},
 	{
 		icon: "i-lucide-calendar-range",
-		title: "Programm",
+		title: "Programm & Regeltermine",
 		description:
-			"Das Programm als Wochenraster oder Liste, mit Ort, Verantwortlichen und Material. Jede und jeder sieht, wann sie dran sind.",
+			"Das Programm als Wochenraster oder Liste. Gruppenstunden und Treffen als Regeltermin mit Dienstplan. Jede und jeder sieht, wann sie dran sind.",
 	},
 	{
 		icon: "i-lucide-list-checks",
@@ -80,7 +80,7 @@ const features = [
 		icon: "i-lucide-messages-square",
 		title: "Nachrichten",
 		description:
-			"Chats im Team, mit einzelnen Personen und im Kernteam. Keine privaten Messenger-Gruppen mit Daten von Teilnehmenden mehr.",
+			"Chats im Team, in Gruppen und mit einzelnen Personen, mit Anhängen, Reaktionen und Lesebestätigungen, live und als Push. Keine privaten Messenger-Gruppen mit Daten von Teilnehmenden mehr.",
 	},
 	{
 		icon: "i-lucide-receipt-euro",
@@ -98,7 +98,7 @@ const features = [
 		icon: "i-lucide-building-2",
 		title: "Kernteam-Bereich",
 		description:
-			"Alle Freizeiten, Personalplanung, Finanzen, Statistiken sowie Material und Ressourcen über alle Events hinweg.",
+			"Alle Freizeiten, Personalplanung, Finanzen, Statistiken sowie Material und Ressourcen über alle Events hinweg. Die Freizeit vom letzten Jahr einfach kopieren.",
 	},
 	{
 		icon: "i-lucide-palette",

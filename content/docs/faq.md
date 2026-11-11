@@ -1,6 +1,6 @@
 ---
 title: "Häufige Fragen"
-description: "Antworten auf die häufigsten Fragen zu Iventworks: Kosten, Datenschutz, Hosting, App und Support."
+description: "Antworten auf die häufigsten Fragen zu Iventworks: Kosten, Datenschutz, Hosting, App, Push-Benachrichtigungen, Regeltermine und Support."
 navigation:
   title: Häufige Fragen
 ---
@@ -26,6 +26,10 @@ Browser. Gesundheitsangaben von Teilnehmenden sieht nur das Team der jeweiligen 
 gibt es nur auf Einladung, und wichtige Änderungen landen im Audit-Log. Mehr dazu auf der Seite
 [Sicherheit & Datenschutz](/sicherheit).
 
+Push-Benachrichtigungen schaltet jede Person selbst ein. Sie laufen über den Push-Dienst ihres
+Browsers (zum Beispiel von Google oder Apple), sind aber Ende-zu-Ende verschlüsselt: Der Dienst stellt
+sie nur zu und kann sie nicht lesen. Auf Wunsch steht der Text einer Nachricht gar nicht erst darin.
+
 ## Wo werden unsere Daten gespeichert?
 
 In der Iventworks Cloud auf Servern in Deutschland. Wenn ihr Iventworks selbst hostet, liegen die
@@ -41,6 +45,24 @@ Self-Hosting richtet ihr sie mit wenigen Einstellungen ein: siehe [Backups](/doc
 
 Iventworks läuft im Browser und lässt sich auf dem iPhone, auf Android und am Computer wie eine App
 installieren, ohne App Store. Wie das geht, steht unter [App installieren](/docs/erste-schritte/app-installieren).
+
+## Bekommen wir Benachrichtigungen aufs Handy?
+
+Ja. Jede Person kann Push-Benachrichtigungen für neue Nachrichten und alles, was für sie ansteht,
+selbst einschalten, auch wenn Iventworks geschlossen ist. Auf iPhone und iPad muss Iventworks dafür als
+App installiert sein. Siehe [Push-Benachrichtigungen](/docs/nutzung/persoenlicher-bereich#push-benachrichtigungen).
+
+## Können wir regelmäßige Treffen planen?
+
+Ja. Ein **Regeltermin** wiederholt sich wöchentlich oder monatlich, etwa die Gruppenstunde. Jeder
+Termin kann ein eigenes Thema haben oder ausfallen, und ein Dienstplan legt fest, wer wann was
+übernimmt. Siehe [Regeltermine & Dienstplan](/docs/nutzung/regeltermine).
+
+## Können wir eine Freizeit vom letzten Jahr wiederverwenden?
+
+Ja. Das Kernteam kopiert ein Event und wählt aus, was mitkommt: Team, Programm, Zuständigkeiten,
+Aufgaben, Dokumente und mehr. Programm und Fristen wandern mit dem neuen Datum mit. Siehe
+[Events kopieren](/docs/nutzung/freizeiten-und-events#events-kopieren).
 
 ## Wie bekommen Mitarbeitende einen Zugang?
 

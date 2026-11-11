@@ -61,7 +61,8 @@ export default defineNuxtConfig({
 		},
 	},
 
-	// Nuxt Content's default languages plus the ones the self-hosting docs use (.env files).
+	// Nuxt Content's default languages plus the ones the self-hosting docs use (.env files, proxy
+	// configs). Shiki has no Caddyfile grammar: those blocks are `text`.
 	content: {
 		build: {
 			markdown: {
@@ -79,6 +80,8 @@ export default defineNuxtConfig({
 						"yaml",
 						"ini",
 						"dotenv",
+						"nginx",
+						"apache",
 					],
 				},
 			},

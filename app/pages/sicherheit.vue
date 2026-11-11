@@ -20,6 +20,7 @@ const details = [
 			"Passwörter werden mit Argon2 gehasht, Anmeldeversuche sind begrenzt, und fehlgeschlagene Logins verraten nicht, ob ein Benutzername existiert.",
 			"Content-Security-Policy ohne unsichere Inline-Skripte, HSTS und weitere Sicherheits-Header bei jeder Antwort.",
 			"Berechtigungen werden auf dem Server geprüft, nicht nur in der Oberfläche.",
+			"Die Live-Verbindung braucht ein einmaliges Ticket und endet sofort, wenn sich jemand abmeldet oder eine Sitzung beendet wird.",
 		],
 	},
 	{
@@ -32,6 +33,8 @@ const details = [
 			"Zugang nur auf Einladung, mit klaren Rollen und Rechten.",
 			"Audit-Log: wichtige Änderungen sind nachvollziehbar.",
 			"Benutzer können ihr Konto selbst löschen.",
+			"Push-Benachrichtigungen nur, wenn ihr sie selbst einschaltet: Ende-zu-Ende verschlüsselt, auf Wunsch ohne Nachrichtentext.",
+			"Online-Status und „zuletzt online“ lassen sich verbergen.",
 			"Freigabelinks für Externe mit Passwort und Ablaufdatum, von Admins zentral einsehbar und abschaltbar.",
 		],
 	},

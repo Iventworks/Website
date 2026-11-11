@@ -8,8 +8,9 @@ navigation:
 # Dokumentation
 
 Willkommen in der Iventworks-Dokumentation. Iventworks ist eine Plattform, mit der Organisationen
-ihre **Freizeiten, Camps und Events** gemeinsam planen und durchführen: Teilnehmende, Programm,
-Zimmer, Team, Aufgaben, Nachrichten, Dokumente und Finanzen an einem Ort.
+ihre **Freizeiten, Camps, Events und regelmäßigen Treffen** gemeinsam planen und durchführen:
+Teilnehmende, Programm, Zimmer, Team, Dienstplan, Aufgaben, Nachrichten, Dokumente und Finanzen an
+einem Ort, im Browser und als App mit Push-Benachrichtigungen.
 
 ## Für wen ist Iventworks?
 
@@ -19,8 +20,9 @@ planen. Jede Person sieht dabei genau das, was sie für ihre Rolle braucht:
 
 - **Mitarbeitende** haben ihren persönlichen Bereich mit Aufgaben, Nachrichten und Kalender und
   sehen die Freizeiten, in deren Team sie sind.
-- **Leitungen** verwalten ihre Freizeit: Teilnehmende, Programm, Zimmer, Team und Budget.
-- **Das Kernteam** koordiniert alle Freizeiten der Organisation.
+- **Leitungen** verwalten ihre Freizeit: Teilnehmende, Programm, Zimmer, Team und Budget, bei
+  Regelterminen auch die Termine und den Dienstplan.
+- **Das Kernteam** koordiniert alle Freizeiten der Organisation und kopiert sie fürs nächste Mal.
 - **Admins** verwalten Benutzer, Einladungen und das Erscheinungsbild der Organisation.
 
 ## Cloud oder Self-Hosting

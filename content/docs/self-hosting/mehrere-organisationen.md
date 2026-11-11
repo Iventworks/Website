@@ -35,11 +35,14 @@ Systemverwaltung die erste Organisation an und ladet ihre Admins ein.
 
 - Ein **Wildcard-DNS-Eintrag** (`*.app.eure-domain.de`) zeigt auf den Server.
 - Der Reverse Proxy leitet die Wildcard-Domain **und** alle eigenen Domains der Organisationen an
-  Iventworks weiter und übergibt den ursprünglichen Hostnamen im Header `X-Forwarded-Host` (oder
-  `X-Iventworks-Host`).
+  Iventworks weiter und übergibt den ursprünglichen Hostnamen (im Header `Host` oder
+  `X-Forwarded-Host`).
 - Für Zertifikate braucht ihr ein Wildcard-Zertifikat oder **On-Demand-TLS**. Für On-Demand-TLS,
   etwa mit der `ask`-Option von Caddy, antwortet
   `GET /api/v1/instance/tls-check?domain=…` mit 200 für jede Adresse, die Iventworks bedient.
+
+Eine fertige Caddy-Konfiguration mit On-Demand-TLS und Hinweise für nginx, Traefik und Apache stehen
+unter [Reverse Proxy & HTTPS](/docs/self-hosting/reverse-proxy#mehrere-organisationen).
 
 ### Eigene Domains
 

@@ -63,14 +63,27 @@ export const docsSections: DocsSection[] = [
 			{
 				to: "/docs/nutzung/persoenlicher-bereich",
 				title: "Persönlicher Bereich",
-				description: "Übersicht, Aufgaben, Nachrichten, Kalender und Notizen.",
+				description: "Übersicht, Aufgaben, Kalender, Notizen und Push-Benachrichtigungen.",
 				icon: "i-lucide-layout-dashboard",
+			},
+			{
+				to: "/docs/nutzung/nachrichten",
+				title: "Nachrichten",
+				description: "Chats mit Anhängen, Antworten, Reaktionen, Lesebestätigungen und Suche.",
+				icon: "i-lucide-messages-square",
 			},
 			{
 				to: "/docs/nutzung/freizeiten-und-events",
 				title: "Freizeiten & Events",
-				description: "Teilnehmende, Programm, Zimmer, Team und Finanzen einer Freizeit.",
+				description:
+					"Teilnehmende, Programm, Zimmer, Team und Finanzen einer Freizeit, Events kopieren.",
 				icon: "i-lucide-tent",
+			},
+			{
+				to: "/docs/nutzung/regeltermine",
+				title: "Regeltermine & Dienstplan",
+				description: "Wöchentliche oder monatliche Termine und wer wann was übernimmt.",
+				icon: "i-lucide-calendar-sync",
 			},
 			{
 				to: "/docs/nutzung/dokumente-und-freigaben",
@@ -117,6 +130,12 @@ export const docsSections: DocsSection[] = [
 				title: "Installation",
 				description: "Iventworks mit Docker auf dem eigenen Server installieren.",
 				icon: "i-lucide-server",
+			},
+			{
+				to: "/docs/self-hosting/reverse-proxy",
+				title: "Reverse Proxy & HTTPS",
+				description: "Konfigurationen für Caddy, nginx, Traefik und Apache, mit WebSockets.",
+				icon: "i-lucide-network",
 			},
 			{
 				to: "/docs/self-hosting/konfiguration",
