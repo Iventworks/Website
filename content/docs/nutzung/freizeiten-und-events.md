@@ -71,8 +71,11 @@ festhalten will.
 
 ## Dokumente
 
-Jedes Event hat eigene **Dokumente**, etwa Anmeldeformulare, Pläne oder Listen. Wie ihr Dateien mit
-Menschen ohne Konto teilt, steht unter [Dokumente & Freigaben](/docs/nutzung/dokumente-und-freigaben).
+Jedes Event hat eigene **Dokumente**, etwa Anmeldeformulare, Pläne oder Listen. Das ganze Team darf
+sie ansehen und hochladen. Die Leitung kann einzelne Ordner und Dateien einschränken, zum Beispiel auf
+eine Gruppe oder auf die Leitung selbst, und Dateien mit Menschen ohne Konto teilen. Siehe
+[Dokumente & Freigaben](/docs/nutzung/dokumente-und-freigaben) und
+[Dokumente bearbeiten](/docs/nutzung/dokumente-bearbeiten).
 
 ## Finanzen
 
@@ -110,7 +113,7 @@ ein Event über **Event kopieren** auf seiner Übersicht, in den **Einstellungen
 | **Budgetplanung** | Die geplanten Posten, keine Ausgaben oder Belege |
 | **Notizen** | Die Notizen des Events; die der Gruppen nur mit den Gruppen |
 | **Neuigkeiten** | Die Ankündigungen an das Team |
-| **Dokumente** | Alle Ordner und Dateien als eigene Kopien |
+| **Dokumente** | Alle Ordner und Dateien als eigene Kopien, mit ihrem Zugriff: Einträge für Gruppen nur mit den Gruppen, für Personen nur mit dem Team. Nicht der Papierkorb und keine älteren Versionen. |
 | **Ressourcen** | Reservierungen, soweit das Material an den neuen Tagen frei ist |
 | **Teilnehmende** | Mit allen Angaben, auch zur Gesundheit, neu angemeldet und unbezahlt |
 

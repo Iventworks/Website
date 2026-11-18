@@ -1,6 +1,6 @@
 ---
 title: "Benutzer & Einladungen"
-description: "Als Admin Personen zu Iventworks einladen, Rollen vergeben, Passwort-Links erstellen und das Audit-Log nutzen."
+description: "Als Admin Personen zu Iventworks einladen, Rollen vergeben, Passwort-Links erstellen, Gruppen anlegen und das Audit-Log nutzen."
 navigation:
   title: Benutzer & Einladungen
 ---
@@ -30,6 +30,20 @@ einen **Passwort-Link**, den du ihr gibst.
 Unter **Administration → Benutzer** siehst du alle Konten deiner Organisation. Dort änderst du
 Rollen, erstellst Passwort-Links und siehst die Aktivität einzelner Personen. Welche Rolle was darf,
 steht unter [Rollen & Rechte](/docs/erste-schritte/rollen-und-rechte).
+
+## Gruppen
+
+Unter **Administration → Gruppen** legst du Gruppen von Personen an, die organisationsweit
+zusammenarbeiten, etwa ein Technikteam oder einen Leitungskreis.
+
+1. Klicke auf **Neue Gruppe**.
+2. Gib einen **Namen** ein, optional eine Beschreibung und eine Farbe.
+3. Wähle unter **Mitglieder** die Personen aus und klicke auf **Anlegen**.
+
+Das Kernteam kann Gruppen dann Zugriff auf Dokumente der Organisation geben, siehe
+[Dokumente & Freigaben](/docs/nutzung/dokumente-und-freigaben#zugriff-festlegen). Gruppen anlegen,
+ändern und löschen dürfen nur Admins. Wird eine Gruppe gelöscht, endet auch ihr Zugriff auf
+Dokumente.
 
 ## Audit-Log
 

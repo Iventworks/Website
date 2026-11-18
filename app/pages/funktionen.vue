@@ -95,14 +95,16 @@ const areas = [
 	{
 		id: "dokumente",
 		icon: "i-lucide-folder-lock",
-		title: "Dokumente & Freigabelinks",
-		description: "Dateien sicher ablegen und gezielt mit Externen teilen.",
+		title: "Dokumente & Freigaben",
+		description: "Dateien ablegen, gemeinsam bearbeiten und gezielt teilen.",
 		points: [
 			"Dokumente pro Freizeit und eine Bibliothek für die ganze Organisation",
-			"Freigabelinks für Personen ohne Konto: ansehen, hochladen, bearbeiten",
-			"Upload-Briefkasten, z. B. für Anmeldeformulare oder Fotos",
-			"Optionales Passwort und Ablaufdatum",
-			"Übersicht aller Links für Admins, Freigaben abschaltbar",
+			"Zugriff pro Ordner und Datei: für alle, für Gruppen, einzelne Personen oder nur die Leitung",
+			"Vorschau im Browser für PDFs, Bilder, Markdown und Tabellen",
+			"Markdown-Dokumente gemeinsam und live bearbeiten",
+			"Word, Excel und PowerPoint im Browser, mit Euro-Office (optional)",
+			"Versionen und Papierkorb: Gelöschtes 30 Tage wiederherstellbar",
+			"Freigabelinks für Personen ohne Konto, mit Passwort, Ablaufdatum und Upload-Briefkasten",
 		],
 	},
 	{
@@ -113,6 +115,7 @@ const areas = [
 		points: [
 			"Zugang nur auf Einladung",
 			"Rollen: Admin, Kernteam, Mitarbeitende",
+			"Gruppen der Organisation, z. B. für den Zugriff auf Dokumente",
 			"Name, Farbe, Logo und Icon eurer Organisation",
 			"Eigene Domains für eure Organisation",
 			"Audit-Log mit allen wichtigen Änderungen",

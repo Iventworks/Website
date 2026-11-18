@@ -88,8 +88,14 @@ export const docsSections: DocsSection[] = [
 			{
 				to: "/docs/nutzung/dokumente-und-freigaben",
 				title: "Dokumente & Freigaben",
-				description: "Dateien ablegen und mit Freigabelinks an Externe weitergeben.",
+				description: "Wo Dokumente liegen, wer was sieht, und Freigabelinks für Externe.",
 				icon: "i-lucide-folder-lock",
+			},
+			{
+				to: "/docs/nutzung/dokumente-bearbeiten",
+				title: "Dokumente bearbeiten",
+				description: "Vorschau, gemeinsam bearbeiten, Office, Versionen und Papierkorb.",
+				icon: "i-lucide-file-pen-line",
 			},
 			{
 				to: "/docs/nutzung/kernteam",
@@ -105,7 +111,7 @@ export const docsSections: DocsSection[] = [
 			{
 				to: "/docs/administration/benutzer-und-einladungen",
 				title: "Benutzer & Einladungen",
-				description: "Personen einladen, Rollen vergeben und das Audit-Log nutzen.",
+				description: "Personen einladen, Rollen vergeben, Gruppen anlegen und das Audit-Log nutzen.",
 				icon: "i-lucide-users",
 			},
 			{
@@ -142,6 +148,12 @@ export const docsSections: DocsSection[] = [
 				title: "Konfiguration",
 				description: "Alle Einstellungen über Umgebungsvariablen.",
 				icon: "i-lucide-sliders-horizontal",
+			},
+			{
+				to: "/docs/self-hosting/office",
+				title: "Office-Dokumente",
+				description: "Word, Excel und PowerPoint im Browser mit Euro-Office.",
+				icon: "i-lucide-file-text",
 			},
 			{
 				to: "/docs/self-hosting/backups",

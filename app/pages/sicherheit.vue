@@ -35,6 +35,7 @@ const details = [
 			"Benutzer können ihr Konto selbst löschen.",
 			"Push-Benachrichtigungen nur, wenn ihr sie selbst einschaltet: Ende-zu-Ende verschlüsselt, auf Wunsch ohne Nachrichtentext.",
 			"Online-Status und „zuletzt online“ lassen sich verbergen.",
+			"Zugriff auf Dokumente pro Ordner und Datei, vom Server bei jeder Anfrage geprüft. Gelöschtes bleibt 30 Tage im Papierkorb.",
 			"Freigabelinks für Externe mit Passwort und Ablaufdatum, von Admins zentral einsehbar und abschaltbar.",
 		],
 	},
