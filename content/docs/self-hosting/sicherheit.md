@@ -46,11 +46,13 @@ Datensatz einer anderen Organisation verweisen.
 - Hochgeladene Dateien liefert Iventworks nur als Bild, PDF oder Text direkt im Browser aus, alles
   andere (auch SVG und HTML) nur zum Herunterladen. So kann eine Datei kein Skript unter eurer
   Adresse ausführen.
-- Gelöschtes bleibt 30 Tage im Papierkorb, ältere Fassungen in den Versionen.
+- Gelöschte Dokumente bleiben 30 Tage im Papierkorb, ältere Fassungen in den Versionen. Belege,
+  Chat-Anhänge und die Dokumente eines gelöschten Events sind sofort weg.
 - Der optionale [Office-Server](/docs/self-hosting/office) läuft unter einem **eigenen Hostnamen**.
   Sein Code läuft nie unter der Adresse von Iventworks: Der Browser schickt ihm nur ein Token für eine
   Datei. Iventworks prüft bei jeder seiner Anfragen seine Signatur, das Token, die Anmeldung und die
-  aktuellen Rechte der Person. Der Office-Server holt nichts aus eurem internen Netz.
+  aktuellen Rechte der Person. Ohne gültige Signatur lehnt Iventworks ab, ein Token allein reicht
+  nicht. Der Office-Server holt nichts aus eurem internen Netz.
 
 ## Sicherheits-Header
 

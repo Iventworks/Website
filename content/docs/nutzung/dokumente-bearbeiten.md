@@ -21,9 +21,9 @@ Ein Klick auf eine Datei öffnet sie in Iventworks, mit einer Vorschau für:
 - **Textdateien**
 
 Über der Vorschau führt der Pfad zurück in den Ordner. Daneben findest du **Herunterladen** und im
-Menü **Versionen** und **Neue Fassung hochladen**, bei PDFs, Bildern und Textdateien auch **In neuem
-Tab öffnen**. Dateien ohne Vorschau
-lädst du herunter. Word, Excel und PowerPoint öffnen sich im Browser, wenn eure Organisation einen
+Menü **Versionen**, bei PDFs, Bildern und Textdateien auch **In neuem Tab öffnen**. Darfst du die
+Datei bearbeiten, steht dort auch **Neue Fassung hochladen**. Dateien ohne Vorschau lädst du
+herunter. Word, Excel und PowerPoint öffnen sich im Browser, wenn eure Organisation einen
 Office-Server hat, siehe [Office-Dokumente](#office-dokumente).
 
 ## Neue Dokumente
@@ -38,9 +38,9 @@ Office-Server hat, siehe [Office-Dokumente](#office-dokumente).
 Neue Dokumente öffnen sich gleich zum Bearbeiten.
 
 ::callout{icon="i-lucide-notebook-pen"}
-**Notizen oder Dokument?** Notizen sind für Schnelles, das an einem Event, einer Gruppe oder dem
-Kernteam hängt. Dokumente liegen in Ordnern, haben einen eigenen Zugriff, Versionen und lassen sich
-per Link teilen.
+**Notizen oder Dokument?** Notizen sind für Schnelles, nur für dich oder an einem Event, einer
+Gruppe oder dem Kernteam. Dokumente liegen in Ordnern, haben einen eigenen Zugriff, Versionen und
+lassen sich per Link teilen.
 ::
 
 ## Gemeinsam bearbeiten
@@ -55,21 +55,23 @@ Markdown-Dokumente bearbeitet ihr zusammen, live:
    zuletzt gespeichert wurde.
 4. Mit **Fertig** beendest du das Bearbeiten.
 
-Bearbeiten darf, wer für das Dokument **Bearbeiten** oder mehr hat. In der Dateiliste steht bei
-Dokumenten, an denen gerade gearbeitet wird, wer daran schreibt. So lange kann niemand eine neue
-Fassung hochladen, eine Version wiederherstellen oder das Dokument löschen.
+Bearbeiten darf, wer für das Dokument **Bearbeiten** oder mehr hat oder es selbst angelegt hat. In
+der Dateiliste steht bei Dokumenten, an denen gerade gearbeitet wird, wer daran schreibt. So lange
+kann niemand eine neue Fassung hochladen, eine Version wiederherstellen oder das Dokument löschen,
+auch nicht den Ordner, in dem es liegt.
 
 ## Office-Dokumente
 
 Hat eure Organisation einen Office-Server, öffnen sich Word-, Excel- und PowerPoint-Dateien im
-Browser, dazu weitere Formate, die der Office-Server kennt:
+Browser, auch `.odt`, `.ods`, `.odp` und `.rtf`:
 
 1. Öffne die Datei und klicke auf **In Office öffnen**.
 2. Der Editor öffnet sich in Iventworks. Mehrere Personen können gleichzeitig darin arbeiten, Office
    speichert von selbst.
 3. **Schließen** führt zurück zur Datei.
 
-Ohne das Recht zu bearbeiten heißt der Knopf **In Office ansehen**. Den Office-Server richtet ein, wer
+Ohne das Recht zu bearbeiten heißt der Knopf **In Office ansehen**. Formate, die der Office-Server
+nur anzeigen kann, öffnen sich ebenfalls nur zum Ansehen. Den Office-Server richtet ein, wer
 Iventworks betreibt, siehe [Office-Dokumente](/docs/self-hosting/office). Ohne ihn ladet ihr
 Office-Dateien herunter und als **neue Fassung** wieder hoch.
 
@@ -81,8 +83,9 @@ Versionen.
 
 ## Versionen
 
-Bei jeder Änderung behält Iventworks die vorige Fassung, egal ob jemand eine neue Fassung hochlädt,
-im Browser bearbeitet oder über einen Freigabelink etwas ändert. Während jemand bearbeitet, entsteht
+Bei jeder Änderung behält Iventworks die vorige Fassung als Version, egal ob jemand eine neue
+Fassung hochlädt, im Browser bearbeitet oder über einen Freigabelink etwas ändert. Ändert dieselbe
+Person eine Datei mehrmals kurz hintereinander oder bearbeitet ihr sie im Browser, entsteht
 höchstens alle zehn Minuten eine Version.
 
 1. Wähle im Menü der Datei **Versionen**.
@@ -92,7 +95,7 @@ höchstens alle zehn Minuten eine Version.
    Version erhalten, du kannst das also rückgängig machen.
 
 Wiederherstellen darf, wer die Datei bearbeiten darf. Versionen bleiben 30 Tage erhalten, die zehn
-neuesten einer Datei auch länger.
+neuesten einer Datei auch länger. Mehr als 50 Versionen pro Datei hebt Iventworks nicht auf.
 
 ## Papierkorb
 
@@ -103,9 +106,12 @@ bleiben sie 30 Tage und lassen sich wiederherstellen. Danach sind sie endgültig
 - Das **Papierkorb**-Symbol neben der Suche öffnet den Papierkorb des Bereichs.
 - Kernteam (in der Bibliothek) und Leitung (im Event) sehen alles darin. Alle anderen sehen, was sie
   selbst gelöscht haben.
-- **Wiederherstellen** legt das Element zurück in seinen Ordner. Gibt es den nicht mehr, kommt es
-  auf die oberste Ebene.
+- **Wiederherstellen** legt das Element zurück in seinen Ordner.
+- Liegt der Ordner selbst auch im Papierkorb, holt am besten zuerst den Ordner zurück. Einzeln
+  wiederherstellen können das Element dann nur Kernteam bzw. Leitung: Es kommt auf die oberste
+  Ebene, mit eigenem Zugriff **Nur Kernteam** bzw. **Nur Leitung**, bis sie den Zugriff ändern.
 - **Endgültig löschen** und **Papierkorb leeren** dürfen nur Kernteam bzw. Leitung, mit allen
   Versionen.
 
-Belege und Anhänge in Chats kommen nicht in den Papierkorb, sie sind beim Löschen sofort weg.
+Belege, Anhänge in Chats und die Dokumente eines gelöschten Events kommen nicht in den Papierkorb,
+sie sind beim Löschen sofort weg.
