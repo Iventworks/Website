@@ -73,9 +73,9 @@ dessen Zugriff. Siehe [Dokumente & Freigaben](/docs/nutzung/dokumente-und-freiga
 
 ## Können wir Dokumente gemeinsam im Browser bearbeiten?
 
-Ja. Markdown-Dokumente bearbeitet ihr gemeinsam und live, Änderungen und Cursor der anderen seht ihr
-sofort. Word, Excel und PowerPoint öffnen sich im Browser, wenn ein Office-Server
-([Euro-Office](/docs/self-hosting/office)) eingerichtet ist. Siehe
+Ja, Word, Excel und PowerPoint, wenn ein Office-Server ([Nextcloud Office](/docs/self-hosting/office))
+eingerichtet ist: Mehrere Personen arbeiten gleichzeitig in einem Dokument und sehen die Änderungen
+der anderen sofort. Für schnelle Texte und Listen gibt es die Notizen. Siehe
 [Dokumente bearbeiten](/docs/nutzung/dokumente-bearbeiten).
 
 ## Was passiert mit gelöschten oder überschriebenen Dateien?
