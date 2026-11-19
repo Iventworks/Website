@@ -16,14 +16,23 @@ wie bisher heruntergeladen.
 ## Was ihr braucht
 
 - **Mindestens 4 GB Arbeitsspeicher** zusätzlich für den Office-Server
-- **Einen eigenen Hostnamen** für den Office-Server, zum Beispiel `office.eure-organisation.de`, mit
-  HTTPS über euren [Reverse Proxy](/docs/self-hosting/reverse-proxy)
+- **Einen eigenen Hostnamen** für den Office-Server mit HTTPS über euren
+  [Reverse Proxy](/docs/self-hosting/reverse-proxy)
+
+Wir empfehlen `office.ivb.eure-organisation.de`. `ivb` steht für „Iventworks-Backends“: Dienste, die
+nur Iventworks selbst nutzt, liegen darunter, und `office.` bleibt für eure Domain frei. Eingeben muss
+die Adresse außer euch niemand: Der Editor öffnet sich in Iventworks, die Adressleiste zeigt weiter
+Iventworks.
 
 ::callout{icon="i-lucide-shield-alert" color="warning"}
 Nehmt einen **eigenen Hostnamen**, keinen Pfad und keinen anderen Port unter der Adresse von
 Iventworks. Sonst liefe der Code des Office-Servers unter derselben Adresse wie Iventworks und käme
 an die Anmeldung heran.
 ::
+
+Ein Wildcard-Zertifikat für `*.eure-organisation.de` deckt `office.ivb.eure-organisation.de` nicht ab,
+es gilt nur eine Ebene tief. Lasst euren Proxy ein Zertifikat für den Hostnamen holen (Caddy und
+Certbot tun das von selbst) oder nehmt eines für `*.ivb.eure-organisation.de`.
 
 ## 1. Office-Server starten
 
@@ -64,7 +73,7 @@ alles dorthin weiter, auch **WebSockets**: Darüber arbeiten mehrere Personen gl
 Dokument. Mit Caddy:
 
 ```text [/etc/caddy/Caddyfile]
-office.eure-organisation.de {
+office.ivb.eure-organisation.de {
 	reverse_proxy 127.0.0.1:31317
 }
 ```
@@ -77,7 +86,7 @@ und große Anfragen erlauben, siehe [Reverse Proxy & HTTPS](/docs/self-hosting/r
 Tragt in der Compose-Datei bzw. der `.env` von Iventworks ein:
 
 ```dotenv [.env]
-IVENTWORKS_OFFICE_URL=https://office.eure-organisation.de
+IVENTWORKS_OFFICE_URL=https://office.ivb.eure-organisation.de
 IVENTWORKS_OFFICE_INTERNAL_URL=http://eurooffice
 ```
 
