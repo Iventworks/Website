@@ -37,6 +37,19 @@ verhindert den Start mit einer Fehlermeldung. Eine nicht gesetzte Variable nimmt
 Uploads werden während der Verarbeitung im Arbeitsspeicher gehalten. Haltet das Limit deshalb im
 Verhältnis zum RAM eures Servers.
 
+## Office-Dokumente
+
+Optional: Word, Excel und PowerPoint im Browser mit Euro-Office, siehe
+[Office-Dokumente](/docs/self-hosting/office).
+
+| Variable | Standard | Bedeutung |
+| --- | --- | --- |
+| `IVENTWORKS_OFFICE_URL` | – | Öffentliche Adresse des Office-Servers mit eigenem Hostnamen, z. B. `https://office.eure-organisation.de`. Ohne diesen Wert werden Office-Dateien nur heruntergeladen. |
+| `IVENTWORKS_OFFICE_INTERNAL_URL` | `IVENTWORKS_OFFICE_URL` | Adresse, unter der Iventworks den Office-Server selbst erreicht, z. B. `http://eurooffice` im selben Docker-Netz |
+
+Speichert der Office-Server ein Dokument, darf die Anfrage so groß sein wie ein Upload
+(`IVENTWORKS_MAX_UPLOAD_SIZE_MB`).
+
 ## Push-Benachrichtigungen
 
 Push-Benachrichtigungen funktionieren ohne Einstellung. Iventworks nutzt dafür den Standard Web Push:

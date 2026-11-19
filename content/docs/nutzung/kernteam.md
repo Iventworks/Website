@@ -41,7 +41,11 @@ Bestand und Lagerort. Material bucht ihr für einzelne Events, so seht ihr, was 
 ## Neuigkeiten und Dokumente
 
 - **Neuigkeiten verwalten**: Ankündigungen für alle in der Organisation
-- **Dokumente verwalten**: die Bibliothek mit Dokumenten & Leitfäden
+- **Dokumente verwalten**: die Bibliothek mit allem darin, auch mit Ordnern nur fürs Kernteam. Hier
+  legt ihr fest, ob Mitglieder, Gruppen oder einzelne Personen einen Ordner oder eine Datei sehen und
+  bearbeiten dürfen, erstellt Freigabelinks und verwaltet den Papierkorb. **Mitgliederansicht** zeigt
+  die Bibliothek so, wie Mitglieder sie unter **Dokumente & Leitfäden** sehen. Siehe
+  [Dokumente & Freigaben](/docs/nutzung/dokumente-und-freigaben).
 
 ## Interne Notizen und Kernteam-Chat
 

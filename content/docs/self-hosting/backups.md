@@ -9,7 +9,9 @@ navigation:
 
 Iventworks bringt eine eigene Backup-Funktion mit. Sie sichert die **Datenbank und alle
 hochgeladenen Dateien** zusammen, verschlüsselt, nach Zeitplan und auf Wunsch zusätzlich außerhalb
-des Servers.
+des Servers. Dazu gehören auch ältere Versionen von Dokumenten und der Inhalt des Papierkorbs. Der
+optionale [Office-Server](/docs/self-hosting/office) speichert keine Dokumente, er muss nicht mit
+gesichert werden.
 
 ## So funktionieren die Backups
 

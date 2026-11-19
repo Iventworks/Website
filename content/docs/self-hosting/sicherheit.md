@@ -38,13 +38,28 @@ Datensatz einer anderen Organisation verweisen.
 - Alle **Rechte prüft der Server**. Gesundheitsangaben sieht nur das Team der jeweiligen Freizeit.
 - Ein **Audit-Log** hält wichtige Änderungen fest, für die Organisation und pro Event.
 
+## Dokumente
+
+- Wer welche Dokumente sieht und bearbeitet, prüft der Server bei **jeder Anfrage**, auch beim
+  Herunterladen. Zugriff gibt es pro Ordner und Datei, siehe
+  [Dokumente & Freigaben](/docs/nutzung/dokumente-und-freigaben).
+- Hochgeladene Dateien liefert Iventworks nur als Bild, PDF oder Text direkt im Browser aus, alles
+  andere (auch SVG und HTML) nur zum Herunterladen. So kann eine Datei kein Skript unter eurer
+  Adresse ausführen.
+- Gelöschtes bleibt 30 Tage im Papierkorb, ältere Fassungen in den Versionen.
+- Der optionale [Office-Server](/docs/self-hosting/office) läuft unter einem **eigenen Hostnamen**.
+  Sein Code läuft nie unter der Adresse von Iventworks: Der Browser schickt ihm nur ein Token für eine
+  Datei. Iventworks prüft bei jeder seiner Anfragen seine Signatur, das Token, die Anmeldung und die
+  aktuellen Rechte der Person. Der Office-Server holt nichts aus eurem internen Netz.
+
 ## Sicherheits-Header
 
 - Jede Antwort enthält `X-Content-Type-Options`, `X-Frame-Options: DENY`, `Referrer-Policy`,
   `Permissions-Policy` und `Cross-Origin-Opener-Policy`, bei HTTPS zusätzlich **HSTS**.
 - Seiten bekommen eine **Content-Security-Policy** mit den Hashes ihrer eigenen Skripte, ohne
   `unsafe-inline` oder `unsafe-eval` für Skripte. Antworten der API bekommen eine Policy, die
-  nichts erlaubt.
+  nichts erlaubt. Mit Office-Server erlaubt die Policy zusätzlich, dessen Editor in einem Frame zu
+  öffnen.
 - Icons und Schriften kommen vom eigenen Server, nicht von externen Diensten.
 - Anfragen werden auf ihre Größe geprüft, bevor sie gelesen werden: Uploads bis
   `IVENTWORKS_MAX_UPLOAD_SIZE_MB`, alles andere bis 2 MB.
@@ -97,6 +112,8 @@ prüfen, bevor sie wiederhergestellt werden. Siehe [Backups](/docs/self-hosting/
   Push-Schlüsselpaar nach dem Start nicht mehr ändern.
 - Regelmäßig [aktualisieren](/docs/self-hosting/installation).
 - Freigabelinks bei Bedarf unter **Administration → Organisation** einschränken oder abschalten.
+- Den [Office-Server](/docs/self-hosting/office) nur unter einem eigenen Hostnamen betreiben und ihm
+  den Zugriff auf private Adressen nicht erlauben.
 
 ## Sicherheitslücke gefunden?
 

@@ -1,6 +1,6 @@
 ---
 title: "Häufige Fragen"
-description: "Antworten auf die häufigsten Fragen zu Iventworks: Kosten, Datenschutz, Hosting, App, Push-Benachrichtigungen, Regeltermine und Support."
+description: "Antworten auf die häufigsten Fragen zu Iventworks: Kosten, Datenschutz, Hosting, App, Push-Benachrichtigungen, Regeltermine, Dokumente und Support."
 navigation:
   title: Häufige Fragen
 ---
@@ -63,6 +63,25 @@ Termin kann ein eigenes Thema haben oder ausfallen, und ein Dienstplan legt fest
 Ja. Das Kernteam kopiert ein Event und wählt aus, was mitkommt: Team, Programm, Zuständigkeiten,
 Aufgaben, Dokumente und mehr. Programm und Fristen wandern mit dem neuen Datum mit. Siehe
 [Events kopieren](/docs/nutzung/freizeiten-und-events#events-kopieren).
+
+## Können wir festlegen, wer welche Dokumente sieht?
+
+Ja. Für jeden Ordner und jede Datei lässt sich festlegen, wer sie sieht und bearbeiten darf: alle
+Mitglieder, Gruppen oder einzelne Personen, in einem Event auch nur die Leitung. Dokumente der
+Organisation sieht zuerst nur das Kernteam. Siehe [Dokumente & Freigaben](/docs/nutzung/dokumente-und-freigaben).
+
+## Können wir Dokumente gemeinsam im Browser bearbeiten?
+
+Ja. Markdown-Dokumente bearbeitet ihr gemeinsam und live, Änderungen und Cursor der anderen seht ihr
+sofort. Word, Excel und PowerPoint öffnen sich im Browser, wenn ein Office-Server
+([Euro-Office](/docs/self-hosting/office)) eingerichtet ist. Siehe
+[Dokumente bearbeiten](/docs/nutzung/dokumente-bearbeiten).
+
+## Was passiert mit gelöschten oder überschriebenen Dateien?
+
+Gelöschte Dateien und Ordner bleiben 30 Tage im Papierkorb und lassen sich wiederherstellen. Bei
+jeder Änderung behält Iventworks die vorige Fassung als Version. Siehe
+[Versionen und Papierkorb](/docs/nutzung/dokumente-bearbeiten#versionen).
 
 ## Wie bekommen Mitarbeitende einen Zugang?
 
