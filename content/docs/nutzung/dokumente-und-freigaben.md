@@ -14,7 +14,8 @@ navigation:
   Checklisten oder Vorlagen.
 - **Dokumente verwalten** im [Kernteam-Bereich](/docs/nutzung/kernteam) ist dieselbe Bibliothek mit
   allem darin, auch mit Ordnern nur fürs Kernteam. Hier legt das Kernteam fest, wer was sieht, und
-  erstellt Freigabelinks. **Mitgliederansicht** zeigt die Bibliothek so, wie Mitglieder sie sehen.
+  erstellt Freigabelinks. **Mitgliederansicht** zeigt die Bibliothek so, wie du sie als Mitglied
+  siehst, also mit dem, was für alle Mitglieder und deine Gruppen freigegeben ist.
 - Jedes Event hat eigene **Dokumente** für sein Team.
 - **Belege** zu Ausgaben werden beim Einreichen hochgeladen und gehören zur jeweiligen Ausgabe.
 
@@ -29,8 +30,12 @@ Ohne eigene Einstellungen gilt:
 
 | Bereich | Zugriff |
 | --- | --- |
-| **Dokumente & Leitfäden** | Neue Ordner und Dateien sieht zuerst nur das **Kernteam**. Es gibt sie dann für alle Mitglieder, für Gruppen oder für einzelne Personen frei. |
+| **Dokumente & Leitfäden** | Was auf der obersten Ebene neu angelegt wird, sieht zuerst nur das **Kernteam**. Es gibt es dann für alle Mitglieder, für Gruppen oder für einzelne Personen frei. |
 | **Dokumente eines Events** | Das **ganze Team** des Events darf ansehen und hochladen. |
+
+Was du in einen Ordner legst, übernimmt dessen Zugriff. Habt ihr Iventworks schon vorher genutzt,
+bleibt alles sichtbar: Die bisherigen Dokumente der Organisation haben beim Update „Alle Mitglieder:
+Nur ansehen“ bekommen.
 
 Das Kernteam in der Bibliothek und die Leitung im Event haben immer Vollzugriff. Das Kernteam hat
 dabei in jedem Event die Rechte einer Leitung, siehe [Rollen & Rechte](/docs/erste-schritte/rollen-und-rechte).
@@ -54,7 +59,7 @@ eines Events) legen fest, wer auf einen Ordner oder eine Datei zugreifen darf:
 | **Nur ansehen** | Ansehen und herunterladen |
 | **Ansehen & hochladen** | Dazu Dateien und Ordner hinzufügen |
 | **Bearbeiten** | Dazu umbenennen und Dateien bearbeiten oder ersetzen |
-| **Vollzugriff** | Dazu Dateien und Ordner löschen |
+| **Vollzugriff** | Dazu Dateien und Ordner löschen und verschieben |
 | **Nur hochladen** | Ein Briefkasten: hochladen, ohne den Inhalt zu sehen |
 
 Bei einzelnen Dateien gibt es nur **Nur ansehen** und **Bearbeiten**. Ein eigener Zugriff ohne
@@ -68,11 +73,12 @@ stehen die Gruppen des Events zur Auswahl.
 
 - Ein eigener Zugriff gilt für den Ordner **und alles darin**, bis ein Unterordner einen eigenen
   hat.
-- Du siehst etwas nur, wenn du auch **jeden Ordner darüber öffnen** kannst. Gibst du einen
-  Unterordner für jemanden frei, der den Ordner darüber nicht sieht, warnt das Fenster: Die Person
-  würde den Unterordner nie finden.
-- **Eigene Uploads** darfst du umbenennen, verschieben und löschen, solange du dort hochladen darfst.
+- Du siehst etwas nur, wenn du auch **jeden Ordner darüber öffnen** kannst. Kann ein Eintrag den
+  Ordner direkt darüber nicht öffnen, warnt das Fenster: Die Person würde das Element nie finden.
+- Was du **selbst hochgeladen oder angelegt** hast, darfst du bearbeiten, umbenennen, verschieben
+  und löschen, solange du den Ordner öffnen und dort hochladen darfst.
 - Ordner und Dateien mit eigenem Zugriff benennen, verschieben und löschen nur Kernteam bzw. Leitung.
+  Dasselbe gilt für Ordner, in denen solche Ordner oder Dateien liegen.
 - Wer **namentlich** hinzugefügt wird, bekommt eine Benachrichtigung. Bei „Alle Mitglieder“, „Alle im
   Team“ oder Gruppen gibt es keine, das wären zu viele.
 
@@ -93,19 +99,20 @@ zum Beispiel mit Eltern oder einer Unterkunft. Wer den Link hat, kann damit gena
 Link erlaubt. Freigabelinks erstellen das Kernteam in der Bibliothek und die Leitung im Event.
 
 1. Öffne in den Dokumenten das Menü einer Datei oder eines Ordners und wähle **Teilen**.
-2. Klicke auf **Neuer Link** und lege fest, **was der Link erlaubt**: dieselben Stufen wie oben,
-   von **Nur ansehen** bis **Vollzugriff**, oder **Nur hochladen** als Briefkasten, in den andere
-   Dateien legen, ohne den Inhalt zu sehen.
+2. Klicke auf **Neuer Link** und lege fest, **was der Link erlaubt**: bei Ordnern dieselben Stufen
+   wie oben, von **Nur ansehen** bis **Vollzugriff**, oder **Nur hochladen** als Briefkasten, in den
+   andere Dateien legen, ohne den Inhalt zu sehen. Bei Dateien **Nur ansehen** oder **Bearbeiten**.
 3. Optional: ein **Passwort**, ein Ablaufdatum unter **Gültig bis** und eine interne Notiz wie „Für
    die Eltern“.
 4. Mit **Link erstellen & kopieren** landet der Link in deiner Zwischenablage.
 
 Über einen Link ist nur das geteilte Element erreichbar, bei Ordnern mit allem, was darin liegt.
 Was über einen Link gelöscht wird, landet im [Papierkorb](/docs/nutzung/dokumente-bearbeiten#papierkorb).
-Liegt das geteilte Element selbst im Papierkorb, funktioniert der Link nicht, bis es
-wiederhergestellt ist.
+Liegt das geteilte Element oder ein Ordner darüber im Papierkorb, funktioniert der Link nicht, bis
+es wiederhergestellt ist.
 
 ::callout{icon="i-lucide-shield-check"}
-Admins sehen unter **Administration → Freigabelinks** alle Links der Organisation, können einzelne
-widerrufen, Freigaben ganz abschalten und eine Standard-Gültigkeit festlegen.
+Admins sehen unter **Administration → Freigabelinks** alle Links der Organisation und können
+einzelne widerrufen. Unter **Administration → Organisation** schalten sie Freigaben ganz ab oder
+legen eine Standard-Gültigkeit fest.
 ::

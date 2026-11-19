@@ -36,10 +36,14 @@ Certbot tun das von selbst) oder nehmt eines für `*.ivb.eure-organisation.de`.
 
 ## 1. Office-Server starten
 
-Die Compose-Datei von Iventworks enthält den Dienst `eurooffice` schon. Er startet nur mit dem
-Profil `office`:
+Ergänzt eure `docker-compose.yml` um den Dienst `eurooffice`, unter `services:` neben `iventworks`.
+Er startet nur mit dem Profil `office`:
 
 ```yaml [docker-compose.yml]
+services:
+  iventworks:
+    # … wie bisher …
+
   eurooffice:
     profiles: [office]
     image: ghcr.io/euro-office/documentserver:latest
@@ -66,6 +70,10 @@ docker compose --profile office up -d
 Der erste Start kann ein paar Minuten dauern. Wenn alles läuft, könnt ihr das Image auf eine feste Version
 setzen, zum Beispiel `ghcr.io/euro-office/documentserver:v9.3.1`.
 
+Ohne `--profile office` lassen `docker compose pull` und `docker compose up -d` den Office-Server
+aus. Gebt bei [Updates](/docs/self-hosting/installation#updates) deshalb `--profile office` mit, oder
+tragt `COMPOSE_PROFILES=office` in die `.env` neben der Compose-Datei ein.
+
 ## 2. Reverse Proxy einrichten
 
 Der Office-Server lauscht auf `127.0.0.1:31317`. Richtet für seinen Hostnamen HTTPS ein und leitet
@@ -83,12 +91,19 @@ und große Anfragen erlauben, siehe [Reverse Proxy & HTTPS](/docs/self-hosting/r
 
 ## 3. Iventworks verbinden
 
-Tragt in der Compose-Datei bzw. der `.env` von Iventworks ein:
+Tragt beim Dienst `iventworks` unter `environment:` ein:
 
-```dotenv [.env]
-IVENTWORKS_OFFICE_URL=https://office.ivb.eure-organisation.de
-IVENTWORKS_OFFICE_INTERNAL_URL=http://eurooffice
+```yaml [docker-compose.yml]
+services:
+  iventworks:
+    environment:
+      # … wie bisher …
+      IVENTWORKS_OFFICE_URL: https://office.ivb.eure-organisation.de
+      IVENTWORKS_OFFICE_INTERNAL_URL: http://eurooffice
 ```
+
+Nur in der `.env` reicht nicht: Docker Compose setzt daraus nur Platzhalter wie `${…}` in der
+Compose-Datei ein.
 
 - `IVENTWORKS_OFFICE_URL` ist die öffentliche Adresse: Von dort laden die Browser den Editor.
 - `IVENTWORKS_OFFICE_INTERNAL_URL` ist die Adresse, unter der Iventworks den Office-Server im selben
@@ -109,24 +124,29 @@ es **Textdokument**, **Tabelle** und **Präsentation**.
   zur Anmeldung der Person: Abmelden beendet es.
 - Der Office-Server lädt und speichert die Datei bei Iventworks, über die **öffentliche Adresse eurer
   Organisation**. Iventworks prüft jede dieser Anfragen: die **Signatur des Office-Servers**, das
-  Token und die aktuellen Rechte der Person. Wer den Zugriff verliert, kann auch im offenen Editor
-  nicht mehr speichern.
+  Token und die aktuellen Rechte der Person. Ohne gültige Signatur lehnt Iventworks die Anfrage ab,
+  ein Token allein reicht nicht. Wer den Zugriff verliert, kann auch im offenen Editor nicht mehr
+  speichern.
+- Die Schlüssel für die Signatur veröffentlicht der Office-Server selbst (mit `WOPI_ENABLED`).
+  Bekommt er neue, zum Beispiel nach einem Update, holt Iventworks sie von selbst.
 - Der Office-Server holt nichts aus eurem internen Netz (`ALLOW_PRIVATE_IP_ADDRESS: "false"`). Lasst
   das so. Er muss eure öffentliche Adresse aber erreichen, auch vom Server selbst aus.
-- Solange ein Dokument in Office offen ist, kann niemand eine neue Fassung hochladen, eine Version
-  wiederherstellen oder es löschen. Gespeicherte Änderungen landen in den Versionen.
+- Solange jemand ein Dokument in Office **bearbeitet**, kann niemand eine neue Fassung hochladen,
+  eine Version wiederherstellen oder es löschen, auch nicht den Ordner, in dem es liegt. Gespeicherte
+  Änderungen landen in den Versionen.
 
 ## Backups
 
 Die Dokumente selbst liegen in Iventworks und sind in dessen [Backups](/docs/self-hosting/backups).
-Der Office-Server speichert nur Zwischenstände und seine Schlüssel in `/opt/eurooffice/private`.
-Behaltet dieses Verzeichnis bei Updates, sonst brechen offene Editoren ab.
+Der Office-Server speichert keine Dokumente dauerhaft. In `/opt/eurooffice/private` liegen seine
+Schlüssel: Behaltet das Verzeichnis bei Updates, sonst brechen offene Editoren ab.
 
 ## Wenn es nicht klappt
 
 | Problem | Ursache |
 | --- | --- |
-| **In Office öffnen** fehlt | `IVENTWORKS_OFFICE_URL` ist nicht gesetzt, oder Iventworks wurde danach nicht neu gestartet. |
+| **In Office öffnen** fehlt | `IVENTWORKS_OFFICE_URL` ist nicht beim Dienst `iventworks` gesetzt, oder Iventworks wurde danach nicht neu gestartet. Oder die Datei ist kein Office-Format: Der Knopf erscheint bei Word-, Excel- und PowerPoint-Dateien sowie `.odt`, `.ods`, `.odp` und `.rtf`. |
 | „Der Office-Editor konnte nicht geöffnet werden“, im Log `Office discovery … failed` | Iventworks erreicht den Office-Server nicht unter `IVENTWORKS_OFFICE_INTERNAL_URL`, oder er läuft ohne `WOPI_ENABLED: "true"`. |
 | Der Editor bleibt leer oder lädt nicht | Der Hostname des Office-Servers ist nicht über HTTPS erreichbar, oder der Proxy lässt keine WebSockets durch. |
-| Der Editor öffnet sich, kann die Datei aber nicht laden | Der Office-Server erreicht die öffentliche Adresse eurer Organisation nicht, zum Beispiel weil der Server sich selbst nicht über seine öffentliche Adresse erreicht. |
+| Der Editor öffnet sich, kann die Datei aber nicht laden | Der Office-Server erreicht die öffentliche Adresse eurer Organisation nicht, zum Beispiel weil der Server sich selbst nicht über seine öffentliche Adresse erreicht. Oder die Adresse zeigt aus dem Container auf eine interne IP (eigener DNS, `/etc/hosts`): Die blockiert `ALLOW_PRIVATE_IP_ADDRESS: "false"`. |
+| Im Log `Office discovery has no proof key: WOPI calls are refused.` | Der Office-Server veröffentlicht keine Schlüssel für seine Signatur. Startet ihn mit `WOPI_ENABLED: "true"`. |
