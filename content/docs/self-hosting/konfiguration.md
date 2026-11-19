@@ -39,7 +39,7 @@ Verhältnis zum RAM eures Servers.
 
 ## Office-Dokumente
 
-Optional: Word, Excel und PowerPoint im Browser mit Euro-Office, siehe
+Optional: Word, Excel und PowerPoint im Browser mit Nextcloud Office, siehe
 [Office-Dokumente](/docs/self-hosting/office).
 
 | Variable | Standard | Bedeutung |

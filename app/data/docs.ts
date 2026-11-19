@@ -94,7 +94,7 @@ export const docsSections: DocsSection[] = [
 			{
 				to: "/docs/nutzung/dokumente-bearbeiten",
 				title: "Dokumente bearbeiten",
-				description: "Vorschau, gemeinsam bearbeiten, Office, Versionen und Papierkorb.",
+				description: "Ansehen, Office, neue Fassungen, Versionen und Papierkorb.",
 				icon: "i-lucide-file-pen-line",
 			},
 			{
@@ -152,7 +152,7 @@ export const docsSections: DocsSection[] = [
 			{
 				to: "/docs/self-hosting/office",
 				title: "Office-Dokumente",
-				description: "Word, Excel und PowerPoint im Browser mit Euro-Office.",
+				description: "Word, Excel und PowerPoint im Browser mit Nextcloud Office.",
 				icon: "i-lucide-file-text",
 			},
 			{

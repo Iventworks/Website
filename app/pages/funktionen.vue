@@ -100,9 +100,8 @@ const areas = [
 		points: [
 			"Dokumente pro Freizeit und eine Bibliothek für die ganze Organisation",
 			"Zugriff pro Ordner und Datei: für alle, für Gruppen, einzelne Personen oder nur die Leitung",
-			"Vorschau im Browser für PDFs, Bilder, Markdown und CSV-Tabellen",
-			"Markdown-Dokumente gemeinsam und live bearbeiten",
-			"Word, Excel und PowerPoint im Browser, mit Euro-Office (optional)",
+			"Dateien im ganzen Fenster: PDFs im Viewer des Browsers, Bilder, Markdown, CSV und Text",
+			"Word, Excel und PowerPoint gemeinsam im Browser bearbeiten, mit Nextcloud Office (optional)",
 			"Versionen und Papierkorb: Gelöschtes 30 Tage wiederherstellbar",
 			"Freigabelinks für Personen ohne Konto, mit Passwort, Ablaufdatum und Upload-Briefkasten",
 		],
