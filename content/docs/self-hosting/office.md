@@ -47,7 +47,7 @@ services:
   eurooffice:
     profiles: [office]
     image: ghcr.io/euro-office/documentserver:latest
-    container_name: eurooffice
+    container_name: iventworks-eurooffice
     restart: unless-stopped
     ports:
       - "127.0.0.1:31317:80"
@@ -57,9 +57,9 @@ services:
       ALLOW_PRIVATE_IP_ADDRESS: "false"
       EXAMPLE_ENABLED: "false"
     volumes:
-      - /opt/eurooffice/data:/var/lib/euro-office/documentserver
-      - /opt/eurooffice/private:/var/www/euro-office/Data
-      - /opt/eurooffice/logs:/var/log/euro-office/documentserver
+      - /opt/iventworks/eurooffice/data:/var/lib/euro-office/documentserver
+      - /opt/iventworks/eurooffice/private:/var/www/euro-office/Data
+      - /opt/iventworks/eurooffice/logs:/var/log/euro-office/documentserver
 ```
 
 ```bash [Terminal]
@@ -138,7 +138,7 @@ es **Textdokument**, **Tabelle** und **Präsentation**.
 ## Backups
 
 Die Dokumente selbst liegen in Iventworks und sind in dessen [Backups](/docs/self-hosting/backups).
-Der Office-Server speichert keine Dokumente dauerhaft. In `/opt/eurooffice/private` liegen seine
+Der Office-Server speichert keine Dokumente dauerhaft. In `/opt/iventworks/eurooffice/private` liegen seine
 Schlüssel: Behaltet das Verzeichnis bei Updates, sonst brechen offene Editoren ab.
 
 ## Wenn es nicht klappt
