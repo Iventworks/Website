@@ -49,7 +49,7 @@ services:
 
   office:
     profiles: [office]
-    image: ghcr.io/nextcloud-releases/office-documentserver:v9.3.8
+    image: ghcr.io/nextcloud-releases/office-documentserver:latest
     container_name: iventworks-office
     restart: unless-stopped
     ports:
@@ -70,10 +70,9 @@ cd /opt/iventworks/compose
 docker compose --profile office up -d
 ```
 
-Der erste Start kann ein paar Minuten dauern. Das Image steht auf einer festen Version. Neue
-Versionen findet ihr unter den
-[Releases von Nextcloud Office](https://github.com/nextcloud-releases/Office-DocumentServer/releases):
-Zum Aktualisieren ändert ihr die Versionsnummer im Image.
+Der erste Start kann ein paar Minuten dauern. `latest` ist immer die neueste stabile Version von
+Nextcloud Office, Updates holt `docker compose pull`. Was sich geändert hat, steht unter den
+[Releases von Nextcloud Office](https://github.com/nextcloud-releases/Office-DocumentServer/releases).
 
 Ohne `--profile office` lassen `docker compose pull` und `docker compose up -d` den Office-Server
 aus. Gebt bei [Updates](/docs/self-hosting/installation#updates) deshalb `--profile office` mit, oder

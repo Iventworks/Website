@@ -24,9 +24,11 @@ Ein Klick auf eine Datei öffnet sie im ganzen Fenster, ohne Seitenleiste:
   siehe [Office-Dokumente](#office-dokumente)
 
 Oben führt der Pfeil zurück in den Ordner, darunter steht, wo die Datei liegt. Rechts findest du
-**Herunterladen** und im Menü **Versionen**, bei PDFs, Bildern und Textdateien auch **In neuem Tab
-öffnen**. Darfst du die Datei bearbeiten, steht dort auch **Neue Fassung hochladen**. Dateien ohne
-Vorschau lädst du herunter.
+**Versionen**, **Vollbild** und **Herunterladen**, und wer Zugriff und Freigaben verwaltet, auch
+**Zugriff** und **Teilen**. Im Menü daneben stehen bei PDFs, Bildern und Textdateien **In neuem Tab
+öffnen** und, wenn du die Datei bearbeiten darfst, **Neue Fassung hochladen**. Auf schmalen
+Bildschirmen wandern Zugriff, Versionen und Vollbild ins Menü. Dateien ohne Vorschau lädst du
+herunter.
 
 ::callout{icon="i-lucide-notebook-pen"}
 **Notizen oder Dokument?** Für schnelle Texte, Listen und Absprachen gibt es die **Notizen**, nur
@@ -40,13 +42,17 @@ Hat eure Organisation einen Office-Server, öffnen sich Word-, Excel- und PowerP
 im Office-Editor, auch `.odt`, `.ods`, `.odp` und `.rtf`:
 
 - Darfst du die Datei bearbeiten, bearbeitest du sie gleich. Mehrere Personen können gleichzeitig
-  darin arbeiten, Office speichert von selbst.
+  darin arbeiten. Office speichert von selbst in Iventworks, sobald alle das Dokument geschlossen
+  haben. Mit **Strg+S** (Mac: **⌘+S**) speicherst du sofort.
 - Sonst öffnet sie sich zum Ansehen. Oben steht, was gilt: **Bearbeiten** oder **Nur ansehen**.
   Formate, die der Office-Server nur anzeigen kann, öffnen sich ebenfalls nur zum Ansehen.
+- Der Versionsverlauf im Editor öffnet die [Versionen](#versionen) von Iventworks, sein Knopf zum
+  Teilen die Freigabelinks.
 - Der Pfeil oben führt zurück in den Ordner.
 
 Über **Neu** in einem Ordner legst du ein leeres **Textdokument**, eine **Tabelle** oder eine
-**Präsentation** an. Sie öffnen sich gleich im Editor.
+**Präsentation** an. Sie öffnen sich gleich im Editor, auf Deutsch eingestellt: mit deutscher
+Rechtschreibprüfung und im A4-Format.
 
 Solange jemand ein Dokument in Office bearbeitet, steht das in der Dateiliste. So lange kann
 niemand eine neue Fassung hochladen, eine Version wiederherstellen oder das Dokument löschen, auch
@@ -66,10 +72,13 @@ Versionen.
 
 Bei jeder Änderung behält Iventworks die vorige Fassung als Version, egal ob jemand eine neue
 Fassung hochlädt, in Office bearbeitet oder über einen Freigabelink etwas ändert. Ändert dieselbe
-Person eine Datei mehrmals kurz hintereinander oder bearbeitet ihr sie in Office, entsteht
-höchstens alle zehn Minuten eine Version.
+Person eine Datei mehrmals kurz hintereinander, entsteht höchstens alle zehn Minuten eine Version.
 
-1. Wähle im Menü der Datei **Versionen**.
+In Office arbeiten oft mehrere Personen gleichzeitig. Dort entsteht eine Version, wenn Office in
+Iventworks speichert: wenn alle das Dokument geschlossen haben oder jemand **Strg+S** drückt, auch
+dann höchstens alle zehn Minuten eine, egal wer gespeichert hat.
+
+1. Wähle **Versionen** oben in der geöffneten Datei oder im Menü der Datei in der Liste.
 2. Du siehst jede Fassung mit Datum und wer sie geschrieben hat. Mit dem Auge siehst du sie dir in
    Iventworks an, oder du lädst sie herunter.
 3. Mit **Wiederherstellen**, in der Liste oder oben über der älteren Fassung, wird sie wieder die
