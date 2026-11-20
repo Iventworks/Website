@@ -1,6 +1,6 @@
 ---
 title: "Office-Dokumente"
-description: "Word, Excel und PowerPoint im Browser: Nextcloud Office (Euro-Office) neben Iventworks einrichten, mit eigenem Hostnamen und Reverse Proxy."
+description: "Word, Excel und PowerPoint im Browser: Nextcloud Office neben Iventworks einrichten, mit eigenem Hostnamen und Reverse Proxy."
 navigation:
   title: Office-Dokumente
 ---
@@ -39,7 +39,7 @@ Certbot tun das von selbst) oder nehmt eines für `*.ivb.eure-organisation.de`.
 
 ## 1. Office-Server starten
 
-Ergänzt eure `docker-compose.yml` um den Dienst `eurooffice`, unter `services:` neben `iventworks`.
+Ergänzt eure `docker-compose.yml` um den Dienst `office`, unter `services:` neben `iventworks`.
 Er startet nur mit dem Profil `office`:
 
 ```yaml [docker-compose.yml]
@@ -47,10 +47,10 @@ services:
   iventworks:
     # … wie bisher …
 
-  eurooffice:
+  office:
     profiles: [office]
     image: ghcr.io/nextcloud-releases/office-documentserver:v9.3.8
-    container_name: iventworks-eurooffice
+    container_name: iventworks-office
     restart: unless-stopped
     ports:
       - "127.0.0.1:31317:80"
@@ -60,9 +60,9 @@ services:
       ALLOW_PRIVATE_IP_ADDRESS: "false"
       EXAMPLE_ENABLED: "false"
     volumes:
-      - /opt/iventworks/eurooffice/data:/var/lib/nextcloud-office/documentserver
-      - /opt/iventworks/eurooffice/private:/var/www/nextcloud-office/Data
-      - /opt/iventworks/eurooffice/logs:/var/log/nextcloud-office/documentserver
+      - /opt/iventworks/office/data:/var/lib/nextcloud-office/documentserver
+      - /opt/iventworks/office/private:/var/www/nextcloud-office/Data
+      - /opt/iventworks/office/logs:/var/log/nextcloud-office/documentserver
 ```
 
 ```bash [Terminal]
@@ -104,7 +104,7 @@ services:
     environment:
       # … wie bisher …
       IVENTWORKS_OFFICE_URL: https://office.ivb.eure-organisation.de
-      IVENTWORKS_OFFICE_INTERNAL_URL: http://eurooffice
+      IVENTWORKS_OFFICE_INTERNAL_URL: http://office
 ```
 
 Nur in der `.env` reicht nicht: Docker Compose setzt daraus nur Platzhalter wie `${…}` in der
@@ -136,6 +136,9 @@ docker compose up -d
   Bekommt er neue, zum Beispiel nach einem Update, holt Iventworks sie von selbst.
 - Der Office-Server holt nichts aus eurem internen Netz (`ALLOW_PRIVATE_IP_ADDRESS: "false"`). Lasst
   das so. Er muss eure öffentliche Adresse aber erreichen, auch vom Server selbst aus.
+- Jedes Dokument hat beim Office-Server eine eigene Kennung, die zu eurer Installation gehört. Ihr
+  könnt einen Office-Server also auch für mehrere Iventworks-Installationen nutzen, etwa für eine
+  Test- und eine Produktivumgebung.
 - Solange jemand ein Dokument in Office **bearbeitet**, kann niemand eine neue Fassung hochladen,
   eine Version wiederherstellen oder es löschen, auch nicht den Ordner, in dem es liegt. Gespeicherte
   Änderungen landen in den Versionen.
@@ -143,8 +146,8 @@ docker compose up -d
 ## Backups
 
 Die Dokumente selbst liegen in Iventworks und sind in dessen [Backups](/docs/self-hosting/backups).
-Der Office-Server speichert keine Dokumente dauerhaft. In `/opt/iventworks/eurooffice/private` liegen seine
-Schlüssel: Behaltet das Verzeichnis bei Updates, sonst brechen offene Editoren ab.
+Der Office-Server speichert keine Dokumente dauerhaft. In `/opt/iventworks/office/private` liegen
+seine Schlüssel: Behaltet das Verzeichnis bei Updates, sonst brechen offene Editoren ab.
 
 ## Wenn es nicht klappt
 
@@ -153,5 +156,6 @@ Schlüssel: Behaltet das Verzeichnis bei Updates, sonst brechen offene Editoren 
 | Office-Dateien öffnen sich nicht im Editor, sondern nur zum Herunterladen | `IVENTWORKS_OFFICE_URL` ist nicht beim Dienst `iventworks` gesetzt, oder Iventworks wurde danach nicht neu gestartet. Oder die Datei ist kein Office-Format: Der Editor öffnet Word-, Excel- und PowerPoint-Dateien sowie `.odt`, `.ods`, `.odp` und `.rtf`. |
 | „Der Office-Editor konnte nicht geöffnet werden“, im Log `Office discovery … failed` | Iventworks erreicht den Office-Server nicht unter `IVENTWORKS_OFFICE_INTERNAL_URL`, oder er läuft ohne `WOPI_ENABLED: "true"`. |
 | Der Editor bleibt leer oder lädt nicht | Der Hostname des Office-Servers ist nicht über HTTPS erreichbar, oder der Proxy lässt keine WebSockets durch. |
-| Der Editor öffnet sich, kann die Datei aber nicht laden („Sorry, editor could not be loaded“) | Steht im Log von Iventworks `WOPI call refused: …`, nennt die Zeile den Grund. Steht dort nichts, kam der Office-Server gar nicht bei Iventworks an: `docker logs iventworks-eurooffice` zeigt, warum. Meist erreicht er die öffentliche Adresse eurer Organisation nicht, zum Beispiel weil der Server sich selbst nicht über seine öffentliche Adresse erreicht. Oder die Adresse zeigt aus dem Container auf eine interne IP (eigener DNS, `/etc/hosts`): Die blockiert `ALLOW_PRIVATE_IP_ADDRESS: "false"`. |
+| Der Editor öffnet sich, kann die Datei aber nicht laden („Sorry, editor could not be loaded“) | Steht im Log von Iventworks `WOPI call refused: …`, nennt die Zeile den Grund. Steht dort nichts, kam der Office-Server gar nicht bei Iventworks an: `docker logs iventworks-office` zeigt, warum. Meist erreicht er die öffentliche Adresse eurer Organisation nicht, zum Beispiel weil der Server sich selbst nicht über seine öffentliche Adresse erreicht. Oder die Adresse zeigt aus dem Container auf eine interne IP (eigener DNS, `/etc/hosts`): Die blockiert `ALLOW_PRIVATE_IP_ADDRESS: "false"`. |
+| Im Editor „Beim Öffnen dieser Datei ist ein Fehler aufgetreten“ | Der Office-Server hat die Datei bekommen, konnte sie aber nicht umwandeln. Die Ursache steht in seinem Log: `grep -i error /opt/iventworks/office/logs/converter/out.log`. Waren Dateien schon einmal fehlerhaft geöffnet, etwa während der Office-Server die Adresse nicht erreichte, merkt er sich das. `docker compose --profile office up -d --force-recreate office` setzt das zurück. |
 | Im Log `Office discovery has no proof key: WOPI calls are refused.` | Der Office-Server veröffentlicht keine Schlüssel für seine Signatur. Startet ihn mit `WOPI_ENABLED: "true"`. |
