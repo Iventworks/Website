@@ -71,7 +71,7 @@ docker compose --profile office up -d
 ```
 
 Der erste Start kann ein paar Minuten dauern. `latest` ist immer die neueste stabile Version von
-Nextcloud Office, Updates holt `docker compose pull`. Was sich geändert hat, steht unter den
+Nextcloud Office, Updates holt `docker compose --profile office pull`. Was sich geändert hat, steht unter den
 [Releases von Nextcloud Office](https://github.com/nextcloud-releases/Office-DocumentServer/releases).
 
 Ohne `--profile office` lassen `docker compose pull` und `docker compose up -d` den Office-Server
@@ -106,7 +106,7 @@ services:
       IVENTWORKS_OFFICE_INTERNAL_URL: http://office
 ```
 
-Nur in der `.env` reicht nicht: Docker Compose setzt daraus nur Platzhalter wie `${…}` in der
+Nur in die `.env` eintragen reicht nicht: Docker Compose setzt daraus nur Platzhalter wie `${…}` in der
 Compose-Datei ein.
 
 - `IVENTWORKS_OFFICE_URL` ist die öffentliche Adresse: Von dort laden die Browser den Editor.
@@ -145,8 +145,9 @@ docker compose up -d
 ## Backups
 
 Die Dokumente selbst liegen in Iventworks und sind in dessen [Backups](/docs/self-hosting/backups).
-Der Office-Server speichert keine Dokumente dauerhaft. In `/opt/iventworks/office/private` liegen
-seine Schlüssel: Behaltet das Verzeichnis bei Updates, sonst brechen offene Editoren ab.
+Der Office-Server speichert keine Dokumente dauerhaft. Je nach Version legt er seine Schlüssel in
+`/opt/iventworks/office/private` ab: Behaltet das Verzeichnis bei Updates. Ändern sich die Schlüssel
+trotzdem, etwa weil der Container neu erstellt wurde, holt Iventworks die neuen von selbst.
 
 ## Wenn es nicht klappt
 

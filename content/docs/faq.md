@@ -67,7 +67,8 @@ Aufgaben, Dokumente und mehr. Programm und Fristen wandern mit dem neuen Datum m
 ## Können wir festlegen, wer welche Dokumente sieht?
 
 Ja. Für jeden Ordner und jede Datei lässt sich festlegen, wer sie sieht und bearbeiten darf: alle
-Mitglieder, Gruppen oder einzelne Personen, in einem Event auch nur die Leitung. Was neu auf die
+Mitglieder, Gruppen oder einzelne Personen, oder nur das Kernteam bzw. in einem Event nur die
+Leitung. Was neu auf die
 oberste Ebene der Organisations-Bibliothek kommt, sieht zuerst nur das Kernteam; in einem Ordner gilt
 dessen Zugriff. Siehe [Dokumente & Freigaben](/docs/nutzung/dokumente-und-freigaben).
 

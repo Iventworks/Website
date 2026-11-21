@@ -131,6 +131,9 @@ docker compose up -d
 Datenbank-Migrationen laufen beim Start automatisch. Erstellt vor einem Update am besten ein
 Backup, siehe [Backups](/docs/self-hosting/backups).
 
+Mit [Office-Server](/docs/self-hosting/office) gebt ihr bei beiden Befehlen `--profile office` mit,
+oder ihr tragt `COMPOSE_PROFILES=office` in die `.env` neben der Compose-Datei ein.
+
 ## Daten
 
 `/opt/iventworks/data` enthält die Datenbank **und** die hochgeladenen Dateien. Kopiert die

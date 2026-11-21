@@ -6,12 +6,12 @@
 
 <url>
   <loc>https://www.iventworks.de/</loc>
-  <lastmod>2026-11-19T00:00:00+00:00</lastmod>
+  <lastmod>2026-11-21T00:00:00+00:00</lastmod>
   <priority>1.0</priority>
 </url>
 <url>
   <loc>https://www.iventworks.de/funktionen</loc>
-  <lastmod>2026-11-19T00:00:00+00:00</lastmod>
+  <lastmod>2026-11-21T00:00:00+00:00</lastmod>
   <priority>0.9</priority>
 </url>
 <url>
@@ -36,7 +36,7 @@
 </url>
 <url>
   <loc>https://www.iventworks.de/docs/faq</loc>
-  <lastmod>2026-11-19T00:00:00+00:00</lastmod>
+  <lastmod>2026-11-21T00:00:00+00:00</lastmod>
   <priority>0.7</priority>
 </url>
 <url>
@@ -76,17 +76,17 @@
 </url>
 <url>
   <loc>https://www.iventworks.de/docs/nutzung/dokumente-und-freigaben</loc>
-  <lastmod>2026-11-19T00:00:00+00:00</lastmod>
+  <lastmod>2026-11-21T00:00:00+00:00</lastmod>
   <priority>0.7</priority>
 </url>
 <url>
   <loc>https://www.iventworks.de/docs/nutzung/dokumente-bearbeiten</loc>
-  <lastmod>2026-11-19T00:00:00+00:00</lastmod>
+  <lastmod>2026-11-21T00:00:00+00:00</lastmod>
   <priority>0.7</priority>
 </url>
 <url>
   <loc>https://www.iventworks.de/docs/nutzung/kernteam</loc>
-  <lastmod>2026-11-19T00:00:00+00:00</lastmod>
+  <lastmod>2026-11-21T00:00:00+00:00</lastmod>
   <priority>0.7</priority>
 </url>
 <url>
@@ -106,7 +106,7 @@
 </url>
 <url>
   <loc>https://www.iventworks.de/docs/self-hosting/installation</loc>
-  <lastmod>2026-11-11T00:00:00+00:00</lastmod>
+  <lastmod>2026-11-21T00:00:00+00:00</lastmod>
   <priority>0.7</priority>
 </url>
 <url>
@@ -121,7 +121,7 @@
 </url>
 <url>
   <loc>https://www.iventworks.de/docs/self-hosting/office</loc>
-  <lastmod>2026-11-19T00:00:00+00:00</lastmod>
+  <lastmod>2026-11-21T00:00:00+00:00</lastmod>
   <priority>0.7</priority>
 </url>
 <url>
@@ -136,7 +136,7 @@
 </url>
 <url>
   <loc>https://www.iventworks.de/docs/self-hosting/sicherheit</loc>
-  <lastmod>2026-11-19T00:00:00+00:00</lastmod>
+  <lastmod>2026-11-21T00:00:00+00:00</lastmod>
   <priority>0.7</priority>
 </url>
 </urlset>

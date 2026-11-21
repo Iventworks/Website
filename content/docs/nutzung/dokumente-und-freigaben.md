@@ -14,13 +14,15 @@ navigation:
   Checklisten oder Vorlagen.
 - **Dokumente verwalten** im [Kernteam-Bereich](/docs/nutzung/kernteam) ist dieselbe Bibliothek mit
   allem darin, auch mit Ordnern nur fürs Kernteam. Hier legt das Kernteam fest, wer was sieht, und
-  erstellt Freigabelinks. **Mitgliederansicht** zeigt die Bibliothek so, wie du sie als Mitglied
-  siehst, also mit dem, was für alle Mitglieder und deine Gruppen freigegeben ist.
+  erstellt Freigabelinks. **Mitgliederansicht** zeigt die Bibliothek so, wie du sie ohne
+  Kernteam-Rechte siehst: mit dem, was für alle Mitglieder, deine Gruppen oder dich persönlich
+  freigegeben ist. Andere Mitglieder sehen je nach Gruppen und Freigaben mehr oder weniger.
 - Jedes Event hat eigene **Dokumente** für sein Team.
 - **Belege** zu Ausgaben werden beim Einreichen hochgeladen und gehören zur jeweiligen Ausgabe.
 
-Über **Neu** legst du Ordner und neue Dokumente an, **Hochladen** lädt Dateien hoch. Du kannst
-Dateien auch vom Computer in die Liste ziehen. Wie du Dateien ansiehst, gemeinsam bearbeitest,
+Über **Neu** legst du Ordner an und, wenn eure Organisation einen Office-Server hat, neue
+Office-Dokumente. **Hochladen** lädt Dateien hoch. Du kannst Dateien auch vom Computer in die Liste
+ziehen. Wie du Dateien ansiehst, gemeinsam bearbeitest,
 ältere Fassungen zurückholst und Gelöschtes wiederherstellst, steht unter
 [Dokumente bearbeiten](/docs/nutzung/dokumente-bearbeiten).
 
@@ -30,7 +32,7 @@ Ohne eigene Einstellungen gilt:
 
 | Bereich | Zugriff |
 | --- | --- |
-| **Dokumente & Leitfäden** | Was auf der obersten Ebene neu angelegt wird, sieht zuerst nur das **Kernteam**. Es gibt es dann für alle Mitglieder, für Gruppen oder für einzelne Personen frei. |
+| **Dokumente & Leitfäden** | Was auf der obersten Ebene neu angelegt wird, sieht zuerst nur das **Kernteam**. Das Kernteam gibt es dann für alle Mitglieder, für Gruppen oder für einzelne Personen frei. |
 | **Dokumente eines Events** | Das **ganze Team** des Events darf ansehen und hochladen. |
 
 Was du in einen Ordner legst, übernimmt dessen Zugriff. Habt ihr Iventworks schon vorher genutzt,
@@ -78,9 +80,10 @@ stehen die Gruppen des Events zur Auswahl.
 - Was du **selbst hochgeladen oder angelegt** hast, darfst du bearbeiten, umbenennen, verschieben
   und löschen, solange du den Ordner öffnen und dort hochladen darfst.
 - Ordner und Dateien mit eigenem Zugriff benennen, verschieben und löschen nur Kernteam bzw. Leitung.
-  Dasselbe gilt für Ordner, in denen solche Ordner oder Dateien liegen.
+  Ordner, in denen solche Ordner oder Dateien liegen, verschieben und löschen ebenfalls nur sie.
 - Wer **namentlich** hinzugefügt wird, bekommt eine Benachrichtigung. Bei „Alle Mitglieder“, „Alle im
   Team“ oder Gruppen gibt es keine, das wären zu viele.
+- Wer das Team eines Events verlässt, verschwindet auch aus den Zugriffslisten der Event-Dokumente.
 
 ### Woran ihr den Zugriff erkennt
 
@@ -113,6 +116,6 @@ es wiederhergestellt ist.
 
 ::callout{icon="i-lucide-shield-check"}
 Admins sehen unter **Administration → Freigabelinks** alle Links der Organisation und können
-einzelne widerrufen. Unter **Administration → Organisation** schalten sie Freigaben ganz ab oder
-legen eine Standard-Gültigkeit fest.
+einzelne widerrufen. Unter **Administration → Organisation** schalten sie Freigaben ganz ab, dann
+gibt es auch kein **Teilen** mehr, oder legen eine Standard-Gültigkeit fest.
 ::
