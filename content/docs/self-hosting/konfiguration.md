@@ -44,7 +44,7 @@ Optional: Word, Excel und PowerPoint im Browser mit Nextcloud Office, siehe
 
 | Variable | Standard | Bedeutung |
 | --- | --- | --- |
-| `IVENTWORKS_OFFICE_URL` | – | Öffentliche Adresse des Office-Servers mit eigenem Hostnamen, z. B. `https://office.ivb.eure-organisation.de`. Ohne diesen Wert werden Office-Dateien nur heruntergeladen. |
+| `IVENTWORKS_OFFICE_URL` | – | Öffentliche Adresse des Office-Servers mit eigenem Hostnamen, z. B. `https://office.ivb.eure-organisation.de`. Ohne diesen Wert werden Office-Dateien nur heruntergeladen. Eine Adresse mit Pfad oder dem Hostnamen von Iventworks lehnt Iventworks beim Start ab. |
 | `IVENTWORKS_OFFICE_INTERNAL_URL` | `IVENTWORKS_OFFICE_URL` | Adresse, unter der Iventworks den Office-Server selbst erreicht, z. B. `http://office` im selben Docker-Netz |
 
 Speichert der Office-Server ein Dokument, darf die Anfrage so groß sein wie ein Upload

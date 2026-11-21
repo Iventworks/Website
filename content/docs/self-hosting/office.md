@@ -63,6 +63,12 @@ services:
       - /opt/iventworks/office/data:/var/lib/nextcloud-office/documentserver
       - /opt/iventworks/office/private:/var/www/nextcloud-office/Data
       - /opt/iventworks/office/logs:/var/log/nextcloud-office/documentserver
+    healthcheck:
+      test: ["CMD", "curl", "-fsS", "-o", "/dev/null", "http://localhost/healthcheck"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 5m
 ```
 
 ```bash [Terminal]
@@ -153,6 +159,7 @@ trotzdem, etwa weil der Container neu erstellt wurde, holt Iventworks die neuen 
 
 | Problem | Ursache |
 | --- | --- |
+| Iventworks startet nicht, im Log `Office configuration: …` | Die Zeile nennt den Fehler: `IVENTWORKS_OFFICE_URL` muss eine `https://`- oder `http://`-Adresse ohne Pfad sein, mit einem eigenen Hostnamen, nicht dem von Iventworks. `IVENTWORKS_OFFICE_INTERNAL_URL` braucht auch `IVENTWORKS_OFFICE_URL`. |
 | Office-Dateien öffnen sich nicht im Editor, sondern nur zum Herunterladen | `IVENTWORKS_OFFICE_URL` ist nicht beim Dienst `iventworks` gesetzt, oder Iventworks wurde danach nicht neu gestartet. Oder die Datei ist kein Office-Format: Der Editor öffnet Word-, Excel- und PowerPoint-Dateien sowie `.odt`, `.ods`, `.odp` und `.rtf`. |
 | „Der Office-Editor konnte nicht geöffnet werden“, im Log `Office discovery … failed` | Iventworks erreicht den Office-Server nicht unter `IVENTWORKS_OFFICE_INTERNAL_URL`, oder er läuft ohne `WOPI_ENABLED: "true"`. |
 | Der Editor bleibt leer oder lädt nicht | Der Hostname des Office-Servers ist nicht über HTTPS erreichbar, oder der Proxy lässt keine WebSockets durch. |

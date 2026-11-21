@@ -74,9 +74,10 @@ Bei jeder Änderung behält Iventworks die vorige Fassung als Version, egal ob j
 Fassung hochlädt, in Office bearbeitet oder über einen Freigabelink etwas ändert. Ändert dieselbe
 Person eine Datei mehrmals kurz hintereinander, entsteht höchstens alle zehn Minuten eine Version.
 
-In Office arbeiten oft mehrere Personen gleichzeitig. Dort entsteht eine Version, wenn Office in
-Iventworks speichert: wenn alle das Dokument geschlossen haben oder jemand **Strg+S** drückt, auch
-dann höchstens alle zehn Minuten eine, egal wer gespeichert hat.
+In Office arbeiten oft mehrere Personen gleichzeitig. Was in der Datei stand, bevor ihr sie in
+Office geöffnet habt, bleibt immer als Version erhalten. Danach entsteht eine Version, wenn Office in
+Iventworks speichert (wenn alle das Dokument geschlossen haben oder jemand **Strg+S** drückt), und
+zwar höchstens alle zehn Minuten eine, egal wer gespeichert hat.
 
 1. Wähle **Versionen** oben in der geöffneten Datei oder im Menü der Datei in der Liste.
 2. Du siehst jede Fassung mit Datum und der Person, die sie gespeichert hat. Mit dem Auge siehst du sie dir in
