@@ -68,7 +68,9 @@ Iventworks markiert es dann auf der Liste. Bucht weniger oder sprecht mit dem Ke
 ### Verbrauchsmaterial
 
 Bastelpapier, Kreide und Ähnliches ist nach dem Event weg. Bei Verbrauchsmaterial trägt die Leitung
-über **Verbrauch eintragen** ein, wie viel verbraucht wurde. Das geht vom Bestand im Lager ab.
+über **Verbrauch eintragen** ein, wie viel verbraucht wurde. Das geht vom Bestand im Lager ab und
+zählt danach nicht mehr als gebucht. Steht im Lager weniger, als ihr eintragt, korrigiert das
+Kernteam zuerst den Bestand.
 
 ## Einkäufe
 
@@ -82,8 +84,9 @@ entscheidet dabei:
 - **Ins Lager übernehmen**: Es kommt ins Inventar der Organisation, als neues Material oder zu einem
   vorhandenen dazu, und bleibt für dieses Event gebucht.
 
-Danach reicht ihr mit **Auslage einreichen** die Ausgabe ein. Iventworks füllt sie mit Name und
-geschätztem Preis vor. Ihr ergänzt nur den echten Betrag und den Beleg.
+Danach reicht ihr mit **Auslage einreichen** die Ausgabe ein, auch wenn es schon im Lager ist.
+Iventworks füllt sie mit Name und geschätztem Preis vor. Ihr ergänzt nur den echten Betrag und den
+Beleg. Wird die Auslage abgelehnt, könnt ihr eine neue einreichen.
 
 ## Eigene Sachen mitbringen
 
@@ -108,8 +111,9 @@ Die Leitung beantwortet eine Anfrage mit **Beantworten**, auch in Teilen:
 - **Ablehnen**: mit einer Begründung
 
 Auch alle anderen im Team sehen die offenen Anfragen und können mit **Bringe ich mit** helfen. Sind
-genug Antworten da, ist die Anfrage von selbst **erledigt**. Wer gefragt hat, bekommt zu jeder
-Antwort Bescheid. Gehört die Anfrage zu einem Programmpunkt, ist alles, was sie beantwortet, gleich
+genug Antworten da, ist die Anfrage von selbst **erledigt**; fällt eine Antwort weg, ist sie wieder
+offen. Mit **Wieder öffnen** macht die Leitung eine erledigte Anfrage selbst wieder auf. Wer gefragt
+hat, bekommt zu jeder Antwort Bescheid. Gehört die Anfrage zu einem Programmpunkt, ist alles, was sie beantwortet, gleich
 dort eingeplant.
 
 ## Im Programm einplanen
