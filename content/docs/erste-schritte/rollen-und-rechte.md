@@ -27,8 +27,8 @@ Kernteam nur in Freizeiten, in deren Team es ist.
 
 | Rolle | Darf |
 | --- | --- |
-| **Leitung** | Die Freizeit verwalten: Teilnehmende, Programm, Zimmer, Team, Gruppen, Budget, Ausgaben prüfen, Formulare und ihre Antworten, Statistiken, Audit-Log und Einstellungen, alle Dokumente mit Zugriff und Freigabelinks, bei Regelterminen auch die Termine und den Dienstplan |
-| **Mitarbeiter:in** | Alles Organisatorische sehen, auch die Gesundheitsangaben der Teilnehmenden, Notizen zu Teilnehmenden schreiben, Aufgaben und Notizen anlegen, Dokumente ansehen und hochladen (wo die Leitung den Zugriff nicht eingeschränkt hat), Ausgaben einreichen und Dienste im Dienstplan selbst übernehmen |
+| **Leitung** | Die Freizeit verwalten: Teilnehmende, Programm, Zimmer, Team, Gruppen, Material aus dem Lager buchen und Einkäufe planen, Budget, Ausgaben prüfen, Formulare und ihre Antworten, Statistiken, Audit-Log und Einstellungen, alle Dokumente mit Zugriff und Freigabelinks, bei Regelterminen auch die Termine und den Dienstplan |
+| **Mitarbeiter:in** | Alles Organisatorische sehen, auch die Gesundheitsangaben der Teilnehmenden, Notizen zu Teilnehmenden schreiben, Aufgaben und Notizen anlegen, Dokumente ansehen und hochladen (wo die Leitung den Zugriff nicht eingeschränkt hat), Ausgaben einreichen, eigenes Material eintragen und Material anfragen, Dienste im Dienstplan selbst übernehmen |
 
 ## Gesundheitsdaten
 

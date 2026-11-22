@@ -1,6 +1,6 @@
 ---
 title: "Freizeiten & Events"
-description: "Teilnehmende, Programm, Zimmer, Team, Gruppen, Zuständigkeiten, Aufgaben und Finanzen einer Freizeit in Iventworks, und wie ihr ein Event kopiert."
+description: "Teilnehmende, Programm, Zimmer, Team, Gruppen, Zuständigkeiten, Material, Aufgaben und Finanzen einer Freizeit in Iventworks, und wie ihr ein Event kopiert."
 navigation:
   title: Freizeiten & Events
 ---
@@ -64,6 +64,12 @@ Team ein, per Ziehen und Ablegen oder direkt an der Person. Wer noch kein Zimmer
 - **Zuständigkeiten**: wer für welchen Bereich verantwortlich ist, zum Beispiel Erste Hilfe, Küche
   oder Technik
 
+## Material
+
+Unter **Material** steht alles, was das Event braucht: aus dem Lager gebucht, zu kaufen oder von
+jemandem mitgebracht, mit Ort, Einsatz im Programm und einer Packliste. Mitarbeitende tragen ein, was
+sie mitbringen, und fragen an, was fehlt. Siehe [Material](/docs/nutzung/material).
+
 ## Aufgaben und Notizen
 
 Aufgaben und Notizen gibt es auch pro Event, für alles, was das Team gemeinsam erledigen oder
@@ -115,7 +121,7 @@ ein Event über **Event kopieren** auf seiner Übersicht, in den **Einstellungen
 | **Neuigkeiten** | Die Ankündigungen an das Team |
 | **Formulare** | Als Entwürfe mit allen Fragen, ohne Antworten und ohne Link |
 | **Dokumente** | Alle Ordner und Dateien als eigene Kopien, mit ihrem Zugriff: Einträge für Gruppen nur mit den Gruppen, für Personen nur mit dem Team. Nicht der Papierkorb und keine älteren Versionen. |
-| **Ressourcen** | Reservierungen, soweit das Material an den neuen Tagen frei ist |
+| **Material aus dem Lager** | Die Buchungen mit Ort und ihrem Einsatz im Programm, soweit das Material an den neuen Tagen frei ist. Nicht Einkäufe, Mitgebrachtes und Anfragen. |
 | **Teilnehmende** | Mit allen Angaben, auch zur Gesundheit, neu angemeldet und unbezahlt |
 
 Nie kopiert werden Ausgaben, Chats, das Audit-Log, Notizen zu Teilnehmenden und die Notizen der

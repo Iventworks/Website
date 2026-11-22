@@ -36,7 +36,15 @@ und Events der Organisation.
 ## Material & Ressourcen
 
 Das Inventar eurer Organisation: Zelte, Technik, Spielmaterial und alles andere mit Kategorie,
-Bestand und Lagerort. Material bucht ihr für einzelne Events, so seht ihr, was wann wo im Einsatz ist.
+Bestand, Lagerort, Marke, Größe, Zustand und Notizen. Nur das Kernteam sieht diese Seite.
+
+- **Buchungen**: welches Event wann wie viel gebucht hat. Die Leitung eines Events bucht selbst über
+  die [Materialliste](/docs/nutzung/material) ihres Events; ihr könnt hier auch selbst für ein Event
+  buchen oder eine Buchung aufheben.
+- **Zu kaufen**: Mit **Nachkaufen** oder beim Anlegen mit **Muss noch gekauft werden** plant ihr
+  einen Einkauf, mit Anzahl, geschätztem Preis und wer aus dem Kernteam kauft. Gebucht werden kann
+  es erst, wenn ihr es mit **Gekauft** markiert; dann kommt es zum Bestand dazu.
+- **Verbrauchsmaterial**: Was ein Event als verbraucht einträgt, geht vom Bestand ab.
 
 ## Neuigkeiten und Dokumente
 

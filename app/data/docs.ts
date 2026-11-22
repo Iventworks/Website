@@ -104,6 +104,12 @@ export const docsSections: DocsSection[] = [
 				icon: "i-lucide-clipboard-list",
 			},
 			{
+				to: "/docs/nutzung/material",
+				title: "Material",
+				description: "Aus dem Lager buchen, einkaufen, mitbringen, anfragen und packen.",
+				icon: "i-lucide-package",
+			},
+			{
 				to: "/docs/nutzung/kernteam",
 				title: "Kernteam-Bereich",
 				description: "Events, Personal, Finanzen und Ressourcen der ganzen Organisation.",
