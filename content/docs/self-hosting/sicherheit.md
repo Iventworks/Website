@@ -57,14 +57,16 @@ Datensatz einer anderen Organisation verweisen.
 ## Sicherheits-Header
 
 - Jede Antwort enthält `X-Content-Type-Options`, `X-Frame-Options: DENY`, `Referrer-Policy`,
-  `Permissions-Policy` und `Cross-Origin-Opener-Policy`, bei HTTPS zusätzlich **HSTS**.
+  `Permissions-Policy` und `Cross-Origin-Opener-Policy`, bei HTTPS zusätzlich **HSTS**. Nur PDFs,
+  die Iventworks im PDF-Viewer des Browsers anzeigt, darf es selbst einbetten
+  (`X-Frame-Options: SAMEORIGIN`).
 - Seiten bekommen eine **Content-Security-Policy** mit den Hashes ihrer eigenen Skripte, ohne
   `unsafe-inline` oder `unsafe-eval` für Skripte. Antworten der API bekommen eine Policy, die
-  nichts erlaubt. Mit Office-Server erlaubt die Policy zusätzlich, dessen Editor in einem Frame zu
+  nichts erlaubt, Bilder und Texte aus Dateien eine Sandbox. Mit Office-Server erlaubt die Policy zusätzlich, dessen Editor in einem Frame zu
   öffnen.
 - Icons und Schriften kommen vom eigenen Server, nicht von externen Diensten.
-- Anfragen werden auf ihre Größe geprüft, bevor sie gelesen werden: Uploads bis
-  `IVENTWORKS_MAX_UPLOAD_SIZE_MB`, alles andere bis 2 MB.
+- Anfragen werden auf ihre Größe geprüft, bevor sie gelesen werden: Uploads und Speichern aus
+  Office bis `IVENTWORKS_MAX_UPLOAD_SIZE_MB`, alles andere bis 2 MB.
 
 ## Live-Verbindung
 

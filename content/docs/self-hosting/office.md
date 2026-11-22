@@ -63,6 +63,12 @@ services:
       - /opt/iventworks/office/data:/var/lib/nextcloud-office/documentserver
       - /opt/iventworks/office/private:/var/www/nextcloud-office/Data
       - /opt/iventworks/office/logs:/var/log/nextcloud-office/documentserver
+    healthcheck:
+      test: ["CMD", "curl", "-fsS", "-o", "/dev/null", "http://localhost/healthcheck"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 5m
 ```
 
 ```bash [Terminal]
@@ -71,7 +77,7 @@ docker compose --profile office up -d
 ```
 
 Der erste Start kann ein paar Minuten dauern. `latest` ist immer die neueste stabile Version von
-Nextcloud Office, Updates holt `docker compose pull`. Was sich geändert hat, steht unter den
+Nextcloud Office, Updates holt `docker compose --profile office pull`. Was sich geändert hat, steht unter den
 [Releases von Nextcloud Office](https://github.com/nextcloud-releases/Office-DocumentServer/releases).
 
 Ohne `--profile office` lassen `docker compose pull` und `docker compose up -d` den Office-Server
@@ -106,7 +112,7 @@ services:
       IVENTWORKS_OFFICE_INTERNAL_URL: http://office
 ```
 
-Nur in der `.env` reicht nicht: Docker Compose setzt daraus nur Platzhalter wie `${…}` in der
+Nur in die `.env` eintragen reicht nicht: Docker Compose setzt daraus nur Platzhalter wie `${…}` in der
 Compose-Datei ein.
 
 - `IVENTWORKS_OFFICE_URL` ist die öffentliche Adresse: Von dort laden die Browser den Editor.
@@ -145,13 +151,15 @@ docker compose up -d
 ## Backups
 
 Die Dokumente selbst liegen in Iventworks und sind in dessen [Backups](/docs/self-hosting/backups).
-Der Office-Server speichert keine Dokumente dauerhaft. In `/opt/iventworks/office/private` liegen
-seine Schlüssel: Behaltet das Verzeichnis bei Updates, sonst brechen offene Editoren ab.
+Der Office-Server speichert keine Dokumente dauerhaft. Je nach Version legt er seine Schlüssel in
+`/opt/iventworks/office/private` ab: Behaltet das Verzeichnis bei Updates. Ändern sich die Schlüssel
+trotzdem, etwa weil der Container neu erstellt wurde, holt Iventworks die neuen von selbst.
 
 ## Wenn es nicht klappt
 
 | Problem | Ursache |
 | --- | --- |
+| Iventworks startet nicht, im Log `Office configuration: …` | Die Zeile nennt den Fehler: `IVENTWORKS_OFFICE_URL` muss eine `https://`- oder `http://`-Adresse ohne Pfad sein, mit einem eigenen Hostnamen, nicht dem von Iventworks. `IVENTWORKS_OFFICE_INTERNAL_URL` braucht auch `IVENTWORKS_OFFICE_URL`. |
 | Office-Dateien öffnen sich nicht im Editor, sondern nur zum Herunterladen | `IVENTWORKS_OFFICE_URL` ist nicht beim Dienst `iventworks` gesetzt, oder Iventworks wurde danach nicht neu gestartet. Oder die Datei ist kein Office-Format: Der Editor öffnet Word-, Excel- und PowerPoint-Dateien sowie `.odt`, `.ods`, `.odp` und `.rtf`. |
 | „Der Office-Editor konnte nicht geöffnet werden“, im Log `Office discovery … failed` | Iventworks erreicht den Office-Server nicht unter `IVENTWORKS_OFFICE_INTERNAL_URL`, oder er läuft ohne `WOPI_ENABLED: "true"`. |
 | Der Editor bleibt leer oder lädt nicht | Der Hostname des Office-Servers ist nicht über HTTPS erreichbar, oder der Proxy lässt keine WebSockets durch. |

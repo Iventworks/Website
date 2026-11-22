@@ -92,7 +92,7 @@ const features = [
 		icon: "i-lucide-folder",
 		title: "Dokumente & Freigaben",
 		description:
-			"Dokumente pro Freizeit und für die ganze Organisation, mit Zugriff pro Ordner. Gemeinsam im Browser bearbeiten, Versionen und Papierkorb, Freigabelinks für Externe.",
+			"Dokumente pro Freizeit und für die ganze Organisation, mit Zugriff pro Ordner. Mit Office-Server gemeinsam im Browser bearbeiten, Versionen und Papierkorb, Freigabelinks für Externe.",
 	},
 	{
 		icon: "i-lucide-building-2",

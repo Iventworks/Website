@@ -99,7 +99,7 @@ const areas = [
 		description: "Dateien ablegen, gemeinsam bearbeiten und gezielt teilen.",
 		points: [
 			"Dokumente pro Freizeit und eine Bibliothek für die ganze Organisation",
-			"Zugriff pro Ordner und Datei: für alle, für Gruppen, einzelne Personen oder nur die Leitung",
+			"Zugriff pro Ordner und Datei: für alle, für Gruppen, einzelne Personen oder nur Kernteam bzw. Leitung",
 			"Dateien im ganzen Fenster: PDFs im Viewer des Browsers, Bilder, Markdown, CSV und Text",
 			"Word, Excel und PowerPoint gemeinsam im Browser bearbeiten, mit Nextcloud Office (optional)",
 			"Versionen und Papierkorb: Gelöschtes 30 Tage wiederherstellbar",
