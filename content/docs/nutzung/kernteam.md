@@ -47,6 +47,11 @@ Bestand und Lagerort. Material bucht ihr für einzelne Events, so seht ihr, was 
   die Bibliothek so, wie du sie ohne Kernteam-Rechte unter **Dokumente & Leitfäden** siehst. Siehe
   [Dokumente & Freigaben](/docs/nutzung/dokumente-und-freigaben).
 
+## Formulare
+
+Umfragen, Anmeldungen und Feedback, die jede Person mit dem Link oder QR-Code ausfüllen kann, und die
+**Vorlagen** für alle Formulare, auch die der Events. Siehe [Formulare](/docs/nutzung/formulare).
+
 ## Interne Notizen und Kernteam-Chat
 
 Notizen und ein Chat, die nur das Kernteam sieht.

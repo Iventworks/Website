@@ -113,6 +113,7 @@ ein Event über **Event kopieren** auf seiner Übersicht, in den **Einstellungen
 | **Budgetplanung** | Die geplanten Posten, keine Ausgaben oder Belege |
 | **Notizen** | Die Notizen des Events; die der Gruppen nur mit den Gruppen |
 | **Neuigkeiten** | Die Ankündigungen an das Team |
+| **Formulare** | Als Entwürfe mit allen Fragen, ohne Antworten und ohne Link |
 | **Dokumente** | Alle Ordner und Dateien als eigene Kopien, mit ihrem Zugriff: Einträge für Gruppen nur mit den Gruppen, für Personen nur mit dem Team. Nicht der Papierkorb und keine älteren Versionen. |
 | **Ressourcen** | Reservierungen, soweit das Material an den neuen Tagen frei ist |
 | **Teilnehmende** | Mit allen Angaben, auch zur Gesundheit, neu angemeldet und unbezahlt |

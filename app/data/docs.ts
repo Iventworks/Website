@@ -98,6 +98,12 @@ export const docsSections: DocsSection[] = [
 				icon: "i-lucide-file-pen-line",
 			},
 			{
+				to: "/docs/nutzung/formulare",
+				title: "Formulare",
+				description: "Umfragen, Anmeldungen und Feedback per Link und QR-Code, mit Auswertung.",
+				icon: "i-lucide-clipboard-list",
+			},
+			{
 				to: "/docs/nutzung/kernteam",
 				title: "Kernteam-Bereich",
 				description: "Events, Personal, Finanzen und Ressourcen der ganzen Organisation.",

@@ -5,7 +5,7 @@ import { deviceScreens } from "~/data/screenshots";
 usePageSeo({
 	title: "Funktionen – Iventworks",
 	description:
-		"Teilnehmende, Programm, Zimmer, Team, Regeltermine mit Dienstplan, Aufgaben, Nachrichten, Dokumente und Finanzen: alle Funktionen von Iventworks für Freizeiten, Camps und Events.",
+		"Teilnehmende, Programm, Zimmer, Team, Regeltermine mit Dienstplan, Aufgaben, Nachrichten, Dokumente, Formulare und Finanzen: alle Funktionen von Iventworks für Freizeiten, Camps und Events.",
 	ogImage: "https://www.iventworks.de/static/og/iventworks.png",
 });
 
@@ -104,6 +104,20 @@ const areas = [
 			"Word, Excel und PowerPoint gemeinsam im Browser bearbeiten, mit Nextcloud Office (optional)",
 			"Versionen und Papierkorb: Gelöschtes 30 Tage wiederherstellbar",
 			"Freigabelinks für Personen ohne Konto, mit Passwort, Ablaufdatum und Upload-Briefkasten",
+		],
+	},
+	{
+		id: "formulare",
+		icon: "i-lucide-clipboard-list",
+		title: "Formulare",
+		description: "Umfragen, Anmeldungen und Feedback, ausgefüllt per Link oder QR-Code.",
+		points: [
+			"Für das Kernteam und pro Freizeit, aus Vorlagen wie Feedback oder Anmeldung",
+			"Text, Zahlen, Datum, Auswahl, Sterne-Bewertungen und Skalen",
+			"Fragen nur bei bestimmter Antwort zeigen, z. B. „Welche Allergien?“",
+			"Link und QR-Code zum Ausfüllen ohne Konto, z. B. auf einer Folie",
+			"Schließen von Hand oder zu einem festen Zeitpunkt",
+			"Auswertung pro Frage, Filter, einzelne Antworten und CSV-Export",
 		],
 	},
 	{
