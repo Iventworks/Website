@@ -22,7 +22,8 @@ navigation:
 
 Über **Neu** legst du Ordner an und, wenn eure Organisation einen Office-Server hat, neue
 Office-Dokumente. **Hochladen** lädt Dateien hoch. Du kannst Dateien auch vom Computer in die Liste
-ziehen. Wie du Dateien ansiehst, gemeinsam bearbeitest,
+ziehen. Verschieben geht per Ziehen auf einen Ordner oder, auch auf dem Handy, über **Verschieben
+nach …** im Menü einer Datei oder eines Ordners. Wie du Dateien ansiehst, gemeinsam bearbeitest,
 ältere Fassungen zurückholst und Gelöschtes wiederherstellst, steht unter
 [Dokumente bearbeiten](/docs/nutzung/dokumente-bearbeiten).
 
