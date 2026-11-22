@@ -83,14 +83,18 @@ Formular schließt und wieder öffnest.
 
 Fragen kannst du auch nach dem Veröffentlichen noch ändern. Gibt es schon Antworten, weist Iventworks
 darauf hin: Änderungen gelten für neue Antworten, Antworten zu gelöschten Fragen erscheinen nicht mehr
-in der Auswertung.
+in der Auswertung. Die Art einer beantworteten Frage lässt sich dann nur noch so ändern, dass ihre
+Antworten passen: innerhalb der Textfragen (kurz, länger, E-Mail-Adresse) oder der Auswahlfragen.
 
 ### Schließen und Fristen
 
 - **Schließen** im Menü oben rechts beendet die Antworten. Wer den Link öffnet, sieht, dass das
   Formular keine Antworten mehr annimmt. **Wieder öffnen** nimmt wieder Antworten an.
 - Unter **Einstellungen → Antworten annehmen bis** legst du einen Zeitpunkt fest, ab dem das Formular
-  von selbst keine Antworten mehr annimmt. Öffnest du es danach wieder, entfällt die abgelaufene Frist.
+  von selbst keine Antworten mehr annimmt. Öffnest du es danach mit **Wieder öffnen** im Menü, entfällt
+  die abgelaufene Frist.
+- Ein Formular nimmt höchstens **5.000 Antworten** an. Dann steht oben „Antwortlimit erreicht“;
+  Platz schafft nur das Löschen von Antworten.
 - Unter **Einstellungen → Nach dem Absenden** steht der Text, den alle nach dem Absenden sehen, etwa
   ein Dank oder wie es weitergeht.
 
@@ -136,5 +140,6 @@ die Fragen beim Anlegen; spätere Änderungen an der Vorlage ändern es nicht.
 
 - **Duplizieren** im Menü legt eine Kopie als neuen Entwurf an, ohne Antworten.
 - Wird ein Event [kopiert](/docs/nutzung/freizeiten-und-events#events-kopieren), kommen seine Formulare
-  als Entwürfe mit, ohne Antworten und mit neuem Link.
+  als Entwürfe mit, ohne Antworten und ohne Link. Veröffentlichst du eine Kopie, bekommt sie ihren
+  eigenen Link.
 - **Löschen** entfernt das Formular mit allen Antworten. Der Link funktioniert danach nicht mehr.
