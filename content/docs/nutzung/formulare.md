@@ -14,10 +14,28 @@ Antworten wertet ihr direkt in Iventworks aus oder exportiert sie als Tabelle.
 ## Wo Formulare liegen
 
 - **Kernteam → Formulare**: die Formulare des Kernteams und die **Vorlagen** für alle Formulare
-- **Leitung → Formulare** im Menü eines Events: die Formulare dieses Events
+- **Formulare** im Menü eines Events, unter **Dokumente**: die Formulare dieses Events
 
-Die Formulare eines Events sehen nur die Leitung und das Kernteam, nicht das übrige Team: Antworten
-können persönliche Angaben enthalten, etwa bei einer Anmeldung.
+## Wer an Formularen im Event arbeitet
+
+Formulare eines Events legt das ganze Team an. Alle im Team bearbeiten sie, veröffentlichen sie und
+sehen die Antworten. Löschen dürfen ein Formular nur die Leitung und wer es angelegt hat.
+
+Antworten können persönliche Angaben enthalten, etwa bei einer Anmeldung. Deshalb kann die Leitung ein
+Formular für sich behalten: Beim Anlegen wählt sie unter **Wer arbeitet daran?** **Nur Leitung** oder
+**Ganzes Team**, später geht das unter **Einstellungen**. Ein Formular **nur für die Leitung** sieht der
+Rest des Teams nur in der Liste, mit Titel und Status, aber ohne Fragen, Link und Antworten.
+
+| | Leitung | Mitarbeiter:in |
+| --- | --- | --- |
+| Formulare sehen und anlegen | ✓ | ✓ |
+| Formulare des Teams bearbeiten, veröffentlichen, auswerten | ✓ | ✓ |
+| Formulare nur für die Leitung | ✓ | nur, dass es sie gibt |
+| Formular für die Leitung behalten oder freigeben | ✓ | |
+| Formular löschen | ✓ | eigene |
+
+Das Kernteam zählt in jedem Event als Leitung. Die Formulare des Kernteams und die Vorlagen
+verwaltet nur das Kernteam.
 
 ## Formular anlegen
 
@@ -138,8 +156,10 @@ die Fragen beim Anlegen; spätere Änderungen an der Vorlage ändern es nicht.
 
 ## Duplizieren, kopieren, löschen
 
-- **Duplizieren** im Menü legt eine Kopie als neuen Entwurf an, ohne Antworten.
+- **Duplizieren** im Menü legt eine Kopie als neuen Entwurf an, ohne Antworten. Die Kopie eines
+  Formulars nur für die Leitung bleibt nur für die Leitung.
 - Wird ein Event [kopiert](/docs/nutzung/freizeiten-und-events#events-kopieren), kommen seine Formulare
-  als Entwürfe mit, ohne Antworten und ohne Link. Veröffentlichst du eine Kopie, bekommt sie ihren
-  eigenen Link.
-- **Löschen** entfernt das Formular mit allen Antworten. Der Link funktioniert danach nicht mehr.
+  als Entwürfe mit, ohne Antworten und ohne Link, und bleiben für das Team oder nur für die Leitung.
+  Veröffentlichst du eine Kopie, bekommt sie ihren eigenen Link.
+- **Löschen** entfernt das Formular mit allen Antworten. Der Link funktioniert danach nicht mehr. Im
+  Event dürfen das die Leitung und wer das Formular angelegt hat.

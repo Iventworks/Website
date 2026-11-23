@@ -35,7 +35,7 @@ Dazu kommen die **Menge**, **Wo** (wo es beim Event ist, etwa „Materialzelt“
 | Material anfragen | ✓ | ✓ |
 | Angeben, wo etwas ist | ✓ | ✓ |
 | Im Programm einplanen | ✓ | ✓ |
-| Packliste abhaken | ✓ | ✓ |
+| Packliste führen | ✓ | ✓ |
 | Einträge anderer ändern oder entfernen | ✓ | |
 
 Das Inventar der Organisation sieht nur die Leitung, und auch nur so weit, wie sie es zum Buchen
@@ -127,8 +127,15 @@ Bei einem Regeltermin plant ihr Material für einzelne **Termine** ein.
 ## Packliste
 
 Die **Packliste** ist eine Hilfe zum Packen und Zurückbringen, sie ist freiwillig. Sie zeigt alles
-nach Ort sortiert, und du hakst ab, was **eingepackt** und was wieder **zurück** ist. Mit dem Filter
-siehst du nur, was noch fehlt.
+nach Ort sortiert. Jeder Eintrag hat einen Status: **Offen**, **Eingepackt** oder **Zurück**.
+
+- Unter **Alles** stellst du den Status bei jedem Eintrag ein.
+- **Noch einpacken** zeigt, was noch offen ist. Mit **Eingepackt** ist ein Eintrag erledigt.
+- **Noch nicht zurück** zeigt, was eingepackt und noch nicht zurück ist. Mit **Zurück** ist ein
+  Eintrag erledigt.
+
+Danach verschwindet der Eintrag aus der Ansicht. Hast du dich verklickt, nimmt **Rückgängig** in der
+Meldung es zurück.
 
 ## Für das Kernteam
 
