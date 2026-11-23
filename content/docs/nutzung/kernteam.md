@@ -36,7 +36,9 @@ und Events der Organisation.
 ## Material & Ressourcen
 
 Das Inventar eurer Organisation: Zelte, Technik, Spielmaterial und alles andere mit Kategorie,
-Bestand, Lagerort, Marke, Größe, Zustand und Notizen. Nur das Kernteam sieht diese Seite.
+Bestand, Lagerort, Marke, Größe, Zustand und Notizen. Nur das Kernteam sieht diese Seite. Über der
+Liste sucht ihr nach Material und filtert nach Kategorie und **Lagerort**, auch nach allem **Ohne
+Lagerort**.
 
 - **Buchungen**: welches Event wann wie viel gebucht hat. Die Leitung eines Events bucht selbst über
   die [Materialliste](/docs/nutzung/material) ihres Events; ihr könnt hier auch selbst für ein Event
