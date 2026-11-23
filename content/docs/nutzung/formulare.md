@@ -44,7 +44,7 @@ verwaltet nur das Kernteam.
    Fragen, ihre Beschreibung und den Text nach dem Absenden mit.
 3. Gib einen **Titel** ein und klicke auf **Formular anlegen**.
 
-Das Formular ist jetzt ein **Entwurf**: Du kannst in Ruhe alles einrichten, niemand sonst sieht es.
+Das Formular ist jetzt ein **Entwurf**: Du kannst in Ruhe alles einrichten, ausfüllen kann es noch niemand.
 
 ## Fragen
 
