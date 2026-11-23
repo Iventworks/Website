@@ -75,6 +75,11 @@ sie mitbringen, und fragen an, was fehlt. Siehe [Material](/docs/nutzung/materia
 Aufgaben und Notizen gibt es auch pro Event, für alles, was das Team gemeinsam erledigen oder
 festhalten will.
 
+Die Notizen unter **Alle Mitarbeitenden** sieht und bearbeitet das ganze Team, die einer Gruppe nur
+die Gruppe und die Leitung. Eine Notiz für alle, etwa die Hausordnung, kann die Leitung mit dem
+Schalter **Schreibgeschützt** neben **Angepinnt** schützen: Der Rest des Teams liest sie dann nur,
+ändern und löschen kann sie nur die Leitung. Ein Schloss in der Liste zeigt das an.
+
 ## Dokumente
 
 Jedes Event hat eigene **Dokumente**, etwa Anmeldeformulare, Pläne oder Listen. Das ganze Team darf
@@ -117,7 +122,7 @@ ein Event über **Event kopieren** auf seiner Übersicht, in den **Einstellungen
 | **Programm** | Zur selben Uhrzeit, um den neuen Beginn verschoben |
 | **Aufgaben** | Wieder offen; Fälligkeiten wandern mit dem neuen Beginn |
 | **Budgetplanung** | Die geplanten Posten, keine Ausgaben oder Belege |
-| **Notizen** | Die Notizen des Events; die der Gruppen nur mit den Gruppen |
+| **Notizen** | Die Notizen des Events, schreibgeschützte bleiben schreibgeschützt; die der Gruppen nur mit den Gruppen |
 | **Neuigkeiten** | Die Ankündigungen an das Team |
 | **Formulare** | Als Entwürfe mit allen Fragen, ohne Antworten und ohne Link |
 | **Dokumente** | Alle Ordner und Dateien als eigene Kopien, mit ihrem Zugriff: Einträge für Gruppen nur mit den Gruppen, für Personen nur mit dem Team. Nicht der Papierkorb und keine älteren Versionen. |

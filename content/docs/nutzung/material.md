@@ -24,6 +24,9 @@ Jeder Eintrag hat eine **Herkunft**:
 Dazu kommen die **Menge**, **Wo** (wo es beim Event ist, etwa „Materialzelt“ oder ein Zimmer) und
 **Im Programm** (wofür es gebraucht wird).
 
+Über der Liste suchst du nach Material und filterst nach Herkunft und Ort. Unter **Alle Orte** wählst
+du einen oder mehrere Orte; **Noch ohne Ort** zeigt, was noch keinen Platz hat.
+
 ## Was wer darf
 
 | | Leitung | Mitarbeiter:in |
@@ -136,6 +139,9 @@ nach Ort sortiert. Jeder Eintrag hat einen Status: **Offen**, **Eingepackt** ode
 
 Danach verschwindet der Eintrag aus der Ansicht. Hast du dich verklickt, nimmt **Rückgängig** in der
 Meldung es zurück.
+
+Packt ihr Ort für Ort, etwa erst die Küche, zeigt **Alle Orte** auf Wunsch nur bestimmte Orte. Die
+Zähler oben gelten dann für diese Orte.
 
 ## Für das Kernteam
 
